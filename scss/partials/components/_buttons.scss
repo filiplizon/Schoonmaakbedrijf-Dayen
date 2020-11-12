@@ -1,0 +1,49 @@
+.btn {
+    width: 52%;
+    position: relative;
+    padding: 10px 0 10px 10px;
+    border: none;
+
+    background-color: $color-white;
+    color: black;
+    font-weight: $normal;
+    text-align: left;
+    letter-spacing: 1px;
+    transition: background-color .3s;
+
+    -webkit-transition: background-color .3s;
+    -moz-transition: background-color .3s;
+    -ms-transition: background-color .3s;
+    -o-transition: background-color .3s;
+
+    &:hover {
+        background-color: $color-white;
+    }
+
+    &::after {
+        content: '';
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: $color-secondary;
+
+
+
+    }
+
+    &:hover::after {
+        background-color: $color-secondary
+    }
+}
+
+.fa-long-arrow-alt-right {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    font-size: $font-size-xs;
+    color: $color-white;
+    z-index: 1;
+    transform: translateY(-50%);
+}
