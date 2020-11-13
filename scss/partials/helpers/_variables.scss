@@ -1,6 +1,8 @@
 // Colors
-$color-primary: #497A80;
-$color-secondary: #89C5CC;
+// $color-primary: #497A80;
+$color-primary: #69C6EE;
+// $color-secondary: #89C5CC;
+$color-secondary: #3781A1;
 $color-white: #ffffff;
 //Typography
 $base-font-size: 10px;
@@ -19,3 +21,12 @@ $font-size-xl: 7.5rem;
 
 $normal: 400;
 $bold: 700;
+
+//Box sizing
+$box-sizing: border-box;
+
+//Media query
+$mobile: '(min-width:360px)';
+$tablet: '(min-width:768px)';
+$desktop: '(min-width:1024px)';
+$big-desktop: '(min-width:1400px)';

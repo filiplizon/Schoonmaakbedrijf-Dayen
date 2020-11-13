@@ -5,25 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+    <nav class="nav">
+        <div class="nav__logo"></div>
+        <div class="nav__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#" class='nav__link'>home</a></li>
+            <li class="nav__item"><a href="#" class='nav__link'>over ons</a></li>
+            <li class="nav__item"><a href="#" class='nav__link'>diensten</a></li>
+            <li class="nav__item"><a href="#" class='nav__link'>contact</a></li>
+            <li class="nav__item"><a href="#" class='nav__link'><i class="fas fa-mobile-alt nav__icon"></i><span
+                        class="nav__icon--selected">+31
+                        684481736</span></a></li>
         </ul>
     </nav>
 
-    <header>
-        <div class="logo"></div>
-        <div></div>
-        <h1></h1>
-        <p></p>
-        <button></button>
+    <header class="header">
+        <div class="hero"></div>
+        <h1 class="header__title">Schoonmaakdiensten <span class="header__title--color">op het hoogste niveau</span>
+        </h1>
+        <p class="header__text">leer ons beter kennen</p>
+        <button class="btn"><span class="btn__text">Bekijk meer</span><i
+                class="fas fa-long-arrow-alt-right btn__arrow"></i></button>
     </header>
 
     <section>
@@ -112,6 +126,7 @@
             <p></p>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

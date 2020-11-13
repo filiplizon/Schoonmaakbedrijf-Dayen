@@ -1,23 +1,41 @@
 .btn {
     width: 52%;
+    display: block;
     position: relative;
     padding: 10px 0 10px 10px;
-    border: none;
+    margin-top: 10px;
 
+    border: none;
     background-color: $color-white;
     color: black;
     font-weight: $normal;
     text-align: left;
     letter-spacing: 1px;
     transition: background-color .3s;
-
     -webkit-transition: background-color .3s;
     -moz-transition: background-color .3s;
     -ms-transition: background-color .3s;
     -o-transition: background-color .3s;
 
+
+    @include screen(tablet) {
+        width: 35%;
+        font-size: $font-size-xs;
+        margin-top: 20px;
+    }
+
+    @include screen(big-desktop) {
+        width: 17%;
+        font-size: $font-size-xs;
+        margin-top: 30px;
+        border: 1px solid $color-secondary;
+    }
+
+
+
     &:hover {
-        background-color: $color-white;
+        background-color: $color-secondary;
+        color: $color-white;
     }
 
     &::after {
@@ -28,22 +46,35 @@
         right: 0;
         top: 0;
         background-color: $color-secondary;
-
-
+        transition: background-color .3s;
+        -webkit-transition: background-color .3s;
+        -moz-transition: background-color .3s;
+        -ms-transition: background-color .3s;
+        -o-transition: background-color .3s;
 
     }
 
     &:hover::after {
-        background-color: $color-secondary
+        background-color: $color-white;
     }
-}
 
-.fa-long-arrow-alt-right {
-    position: absolute;
-    right: 5%;
-    top: 50%;
-    font-size: $font-size-xs;
-    color: $color-white;
-    z-index: 1;
-    transform: translateY(-50%);
+    &:hover .btn__arrow {
+        color: black;
+    }
+
+    &__arrow {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        font-size: $font-size-xs;
+        color: $color-white;
+        z-index: 1;
+        transform: translateY(-50%);
+        transition: color .3s;
+
+        @include screen(big-desktop) {
+            right: 8%;
+            font-size: $font-size-s;
+        }
+    }
 }
