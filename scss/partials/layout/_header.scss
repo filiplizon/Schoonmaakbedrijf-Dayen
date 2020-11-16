@@ -10,6 +10,7 @@
     @include screen(big-desktop) {
         background: linear-gradient(to right, $color-white 0%, $color-white 40%, $color-primary 40%, $color-primary 100%);
         padding-left: 4%;
+        // height: 100vh;
     }
 
 

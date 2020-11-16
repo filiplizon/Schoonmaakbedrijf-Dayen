@@ -1,8 +1,8 @@
 const menuButton = document.querySelector('.nav__menu');
 const nav = document.querySelector('.nav')
 const menuList = document.querySelector('.nav__list');
-let scroll = true;
 
+let scroll = true;
 
 menuButton.addEventListener('click', () => {
     menuButton.classList.toggle('nav__menu--is-open');
@@ -12,7 +12,15 @@ menuButton.addEventListener('click', () => {
     window.addEventListener("scroll", noscroll);
 })
 
-function noscroll() {
+function noScroll() {
     if (scroll == false)
         window.scrollTo(0, 0);
 }
+
+
+const navIconButton = document.querySelector('.nav__link-mobile');
+const navIcon = document.querySelector('.nav__icon-mobile');
+navIconButton.addEventListener('click', () => {
+    navIconButton.classList.toggle('nav__link-mobile--clicked');
+    navIcon.classList.toggle('nav__icon-mobile--is-selected');
+})
