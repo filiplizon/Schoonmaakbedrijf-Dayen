@@ -9,7 +9,7 @@ menuButton.addEventListener('click', () => {
     nav.classList.toggle('nav--is-open');
     menuList.classList.toggle('nav__list--is-open');
     scroll = !scroll;
-    window.addEventListener("scroll", noscroll);
+    window.addEventListener("scroll", noScroll);
 })
 
 function noScroll() {
