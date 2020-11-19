@@ -2,11 +2,11 @@
     height: 15vh;
     width: 100%;
     background-color: #fff;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
-    opacity: 0.8;
+
     transition: height .3s ease-in-out;
     -webkit-transition: height .3s ease-in-out;
     -moz-transition: height .3s ease-in-out;
@@ -15,7 +15,7 @@
     z-index: 3;
 
     @include screen(big-desktop) {
-        background: linear-gradient(to right, $color-white 0%, $color-white 40%, $color-primary 40%, $color-primary 100%);
+        background-color: transparent;
         opacity: 1;
         height: 10vh;
     }
@@ -180,7 +180,7 @@
             background-color: $color-white;
             height: 100%;
             width: 45%;
-            left: 70%;
+            left: 73%;
             padding: 0;
         }
 

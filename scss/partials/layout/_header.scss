@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    height: 85vh;
+    height: 100vh;
     padding-top: 30px;
     padding-left: 8%;
     background-color: $color-primary;
@@ -20,6 +20,7 @@
         font-size: $font-size-xs;
         font-weight: $bold;
         line-height: 1.5;
+        margin-top: 25%;
 
         &--color {
             color: $color-secondary;
@@ -27,20 +28,23 @@
 
         @include screen(mobile) {
             font-size: $font-size-s;
+            margin-top: 30%;
         }
 
         @include screen(tablet) {
             font-size: $font-size-l;
+            margin-top: 20%;
         }
 
         @include screen(desktop) {
             font-size: $font-size-xl;
             line-height: 1.2;
+            margin-top: 25%;
         }
 
         @include screen(big-desktop) {
             width: 26%;
-            margin-top: 100px;
+            margin-top: 15%;
             font-size: $font-size-m;
             color: black;
             line-height: 1.5;
@@ -99,7 +103,7 @@
     &::before {
         width: 85px;
         height: 85px;
-        top: 42%;
+        top: 52%;
         left: -7%;
 
         @include screen(mobile) {
@@ -120,10 +124,8 @@
         @include screen(big-desktop) {
             width: 100px;
             height: 85vh;
-            top: 5vh;
-
+            top: 15%;
             left: calc(40% - 100px);
-
             border-color: $color-secondary;
             border-right: none;
             z-index: -32;
@@ -135,8 +137,8 @@
     &::after {
         width: 30px;
         height: 30px;
-        right: 15%;
-        top: 20%;
+        right: 10%;
+        top: 35%;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
@@ -158,7 +160,7 @@
         @include screen(desktop) {
             width: 95px;
             height: 95px;
-            right: 15%;
+
         }
 
         @include screen(big-desktop) {
@@ -203,6 +205,7 @@
     @include screen(mobile) {
         height: 400px;
         width: 370px;
+        right: -12%;
     }
 
     @include screen(tablet) {
