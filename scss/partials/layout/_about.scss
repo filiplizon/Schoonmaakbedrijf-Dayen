@@ -92,7 +92,7 @@
     &__text {
         position: relative;
         margin-top: 30px;
-        padding: 0 4%;
+        padding: 5% 4%;
         font-size: $font-size-xxs;
         color: $color-white;
         line-height: 1.5;
@@ -131,6 +131,7 @@
 
         @include screen(big-desktop) {
             width: 40%;
+            padding: 0 4%;
             font-size: $font-size-xs;
             color: #000;
             line-height: 1.7;
