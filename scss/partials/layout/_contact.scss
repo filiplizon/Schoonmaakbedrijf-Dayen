@@ -1,0 +1,134 @@
+.contact {
+    height: 70vh;
+    @include flexbox;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 10px;
+    color: $color-secondary;
+    background: $color-white;
+    font-size: $font-size-xs;
+    overflow: hidden;
+
+    @include screen(tablet) {
+        height: 30vh;
+        padding: 0px 60px;
+        background-color: $color-secondary;
+        color: $color-white;
+        font-size: $font-size-s;
+    }
+
+    @include screen(desktop) {
+        font-size: $font-size-m;
+    }
+
+    @include screen(big-desktop) {
+        height: 40vh;
+        font-size: $font-size-s;
+    }
+
+
+    &__label {
+        position: relative;
+        width: 80%;
+        height: 30%;
+        @include flexbox;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid $color-secondary;
+        line-height: 1.7;
+        color: $color-white;
+        background-color: $color-secondary;
+        box-shadow:
+            0 20px 10px -15px rgba(0, 0, 0, 0.5),
+            0 20px 30px -20px rgba(0, 0, 0, 0.4),
+            0 20px 20px -30px rgba(0, 0, 0, 0.3),
+            0 20px 20px -5px $color-secondary;
+
+        @include screen(mobile) {
+            padding: 10px 40px;
+            margin-bottom: 0;
+            line-height: 2;
+        }
+
+        @include screen(tablet) {
+            width: 55%;
+            height: 50%;
+            padding: 10px 50px;
+            color: $color-secondary;
+            background-color: $color-white;
+            border-color: $color-white;
+        }
+
+
+
+        @include screen(big-desktop) {
+            width: 35%;
+            padding: 10px 100px;
+        }
+
+
+        &::after {
+            content: "\A";
+            border-style: solid;
+            border-width: 50px 50px 50px 0;
+            border-color: transparent $color-secondary transparent transparent;
+            position: absolute;
+            left: -15px;
+
+            @include screen (tablet) {
+                border-color: transparent $color-white transparent transparent;
+            }
+        }
+
+
+
+    }
+
+
+    &__options {
+        height: 50%;
+        @include flexbox;
+        align-items: center;
+        justify-content: space-beetwen;
+        flex-direction: column;
+
+        @include screen(tablet) {
+            width: 100vw;
+            height: 20%;
+            flex-direction: row;
+            justify-content: space-around;
+
+
+        }
+    }
+
+    &__option {
+        height: 30%;
+        @include flexbox;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-beetwen;
+        margin-bottom: 30px;
+
+        @include screen(tablet) {
+            flex-direction: row;
+        }
+    }
+
+    &__icon {
+        font-size: $font-size-m;
+        padding-bottom: 10px;
+
+        @include screen(tablet) {
+            margin-right: 10px;
+
+        }
+
+        @include screen(desktop) {
+            font-size: $font-size-l;
+        }
+    }
+}

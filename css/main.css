@@ -854,6 +854,186 @@ html {
   }
 }
 
+.contact {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 10px;
+  color: #3781A1;
+  background: #ffffff;
+  font-size: 2.2rem;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    height: 30vh;
+    padding: 0px 60px;
+    background-color: #3781A1;
+    color: #ffffff;
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contact {
+    height: 40vh;
+    font-size: 2.8rem;
+  }
+}
+
+.contact__label {
+  position: relative;
+  width: 80%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #3781A1;
+  line-height: 1.7;
+  color: #ffffff;
+  background-color: #3781A1;
+  -webkit-box-shadow: 0 20px 10px -15px rgba(0, 0, 0, 0.5), 0 20px 30px -20px rgba(0, 0, 0, 0.4), 0 20px 20px -30px rgba(0, 0, 0, 0.3), 0 20px 20px -5px #3781A1;
+          box-shadow: 0 20px 10px -15px rgba(0, 0, 0, 0.5), 0 20px 30px -20px rgba(0, 0, 0, 0.4), 0 20px 20px -30px rgba(0, 0, 0, 0.3), 0 20px 20px -5px #3781A1;
+}
+
+@media (min-width: 360px) {
+  .contact__label {
+    padding: 10px 40px;
+    margin-bottom: 0;
+    line-height: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact__label {
+    width: 55%;
+    height: 50%;
+    padding: 10px 50px;
+    color: #3781A1;
+    background-color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contact__label {
+    width: 35%;
+    padding: 10px 100px;
+  }
+}
+
+.contact__label::after {
+  content: "\A";
+  border-style: solid;
+  border-width: 50px 50px 50px 0;
+  border-color: transparent #3781A1 transparent transparent;
+  position: absolute;
+  left: -15px;
+}
+
+@media (min-width: 768px) {
+  .contact__label::after {
+    border-color: transparent #ffffff transparent transparent;
+  }
+}
+
+.contact__options {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-beetwen;
+      -ms-flex-pack: space-beetwen;
+          justify-content: space-beetwen;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .contact__options {
+    width: 100vw;
+    height: 20%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.contact__option {
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-beetwen;
+      -ms-flex-pack: space-beetwen;
+          justify-content: space-beetwen;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .contact__option {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.contact__icon {
+  font-size: 4rem;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .contact__icon {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact__icon {
+    font-size: 5.4rem;
+  }
+}
+
 .footer {
   height: 55vh;
   display: -webkit-box;
