@@ -1,0 +1,259 @@
+.services {
+    min-height: 100vh;
+    padding-top: 20px;
+
+    @include screen(big-desktop) {
+        padding-bottom: 50px;
+    }
+
+    &__heading {
+        position: relative;
+        margin-top: 20px;
+        font-size: $font-size-s;
+        text-align: center;
+        z-index: 2;
+
+        // @include screen(mobile) {
+        //     font-size: $font-size-m;
+        // }
+
+        @include screen(desktop) {
+            font-size: $font-size-l;
+        }
+
+        @include screen(big-desktop) {
+            font-size: $font-size-m;
+        }
+
+        &::before {
+            content: '';
+            width: 30%;
+            height: 100%;
+            position: absolute;
+            left: 13%;
+            background-color: $color-secondary;
+            z-index: -1;
+
+            @include screen(mobile) {
+                left: 14%;
+            }
+
+            @include screen(tablet) {
+                width: 20%;
+                left: 26%;
+            }
+
+            @include screen(tablet) {
+                width: 20%;
+                left: 26%;
+            }
+
+            @include screen(big-desktop) {
+                width: 10%;
+                left: 38%;
+            }
+        }
+
+        &--color {
+            color: $color-white;
+        }
+    }
+
+    &__describtion {
+        padding: 0 4%;
+        margin: 20px auto;
+        font-size: $font-size-xxs;
+
+        @include screen(tablet) {
+            width: 90%;
+            font-size: $font-size-xs;
+        }
+
+        @include screen(desktop) {
+            font-size: $font-size-s;
+        }
+
+        @include screen(big-desktop) {
+            font-size: $font-size-xs;
+            width: 70%;
+            line-height: 1.5;
+        }
+
+    }
+
+    &__wrapper {
+        @include flexbox;
+        flex-direction: column;
+        z-index: -1;
+
+        @include screen(big-desktop) {
+            flex-direction: row;
+            justify-content: space-around;
+            align-self: center;
+        }
+    }
+
+    &__item {
+        height: 40vh;
+        width: 100%;
+        position: relative;
+        margin-top: 20px;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+        transition: transform .25s;
+
+        @include screen(mobile) {
+            height: 45vh;
+        }
+
+        @include screen (tablet) {
+            height: 45vh;
+        }
+
+        @include screen(big-desktop) {
+            height: 70vh;
+            width: 30%;
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            -webkit-transform: scale(1.02);
+            -moz-transform: scale(1.02);
+            -ms-transform: scale(1.02);
+            -o-transform: scale(1.02);
+        }
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        &:nth-child(1) {
+            background-image: url(/img/service-picture1.jpg);
+        }
+
+        &:nth-child(2) {
+            background-image: url(/img/service-picture2.jpg);
+        }
+
+        &:nth-child(3) {
+            background-image: url(/img/service-picture3.jpg);
+        }
+    }
+
+    &__title {
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        font-size: $font-size-xs;
+        color: $color-white;
+        text-align: center;
+        z-index: 2;
+        transform: translatex(-50%);
+        -webkit-transform: translatex(-50%);
+        -moz-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+        -o-transform: translatex(-50%);
+
+        @include screen (mobile) {
+            font-size: $font-size-s;
+        }
+
+
+        @include screen (tablet) {
+            font-size: $font-size-m;
+        }
+
+        @include screen (desktop) {
+            font-size: $font-size-l;
+        }
+
+        @include screen (big-desktop) {
+            font-size: $font-size-s;
+        }
+
+        &--active {
+            transform: translate(-50%, -120%);
+            -webkit-transform: translate(-50%, -120%);
+            -moz-transform: translate(-50%, -120%);
+            -ms-transform: translate(-50%, -120%);
+            -o-transform: translate(-50%, -120%);
+        }
+    }
+
+    &__text {
+        width: 90%;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        margin: 0 auto;
+        font-size: $font-size-xxs;
+        color: $color-white;
+        line-height: 1.4;
+        transform: translateX(-50%) scale(0);
+        -webkit-transform: translateX(-50%) scale(0);
+        -moz-transform: translateX(-50%) scale(0);
+        -ms-transform: translateX(-50%) scale(0);
+        -o-transform: translateX(-50%) scale(0);
+
+
+    }
+
+    &__btn {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        background-color: $color-secondary;
+        font-size: $font-size-xxs;
+        color: $color-white;
+        border: 0;
+        padding: 5px 20px;
+        // border-radius: 20px;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        // -webkit-border-radius: 20px;
+        // -moz-border-radius: 20px;
+        // -ms-border-radius: 20px;
+        // -o-border-radius: 20px;
+
+
+        @include screen (mobile) {
+            font-size: $font-size-xs;
+        }
+
+        @include screen (tablet) {
+            font-size: $font-size-s;
+            padding: 10px 25px;
+        }
+
+        @include screen (desktop) {
+            font-size: $font-size-m;
+            padding: 15px 30px;
+        }
+
+        @include screen (big-desktop) {
+            font-size: $font-size-xs;
+            padding: 10px 25px;
+        }
+
+
+
+
+        &--active {
+            transform: translate(-50%, 170%);
+            -webkit-transform: translate(-50%, 150%);
+            -moz-transform: translate(-50%, 170%);
+            -ms-transform: translate(-50%, 170%);
+            -o-transform: translate(-50%, 170%);
+        }
+    }
+}
