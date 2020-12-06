@@ -130,7 +130,7 @@ html {
   position: fixed;
   left: 8%;
   top: 1%;
-  background-image: url("/img/logo.png");
+  background-image: url("../img/logo.png");
   background-position: center;
   background-size: cover;
   z-index: -3;
@@ -614,7 +614,7 @@ html {
   right: -9%;
   height: 330px;
   width: 300px;
-  background-image: url("/img/header-background.png");
+  background-image: url("../img/header-background.png");
   background-size: cover;
   background-position: center;
   z-index: 1000;
@@ -671,8 +671,7 @@ html {
 .about {
   position: relative;
   min-height: 100vh;
-  height: 100vh;
-  padding: 30px 0;
+  padding: 30px 0 0;
   background-color: #ffffff;
   overflow: hidden;
 }
@@ -835,7 +834,7 @@ html {
   width: 100%;
   height: 40vh;
   position: relative;
-  background-image: url(/img/aboutus-bg.jpg);
+  background-image: url(../img/aboutus-bg.jpg);
   background-size: cover;
   background-position: center;
   -webkit-box-shadow: none;
@@ -857,6 +856,7 @@ html {
 .services {
   min-height: 100vh;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 1400px) {
@@ -867,7 +867,7 @@ html {
 
 .services__heading {
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 2.8rem;
   text-align: center;
   z-index: 2;
@@ -986,6 +986,8 @@ html {
   background-size: cover;
   background-position: center;
   z-index: 0;
+  -webkit-box-shadow: 5px 5px 20px;
+          box-shadow: 5px 5px 20px;
   -webkit-transition: -webkit-transform .25s;
   transition: -webkit-transform .25s;
   transition: transform .25s;
@@ -1029,15 +1031,15 @@ html {
 }
 
 .services__item:nth-child(1) {
-  background-image: url(/img/service-picture1.jpg);
+  background-image: url(../img/service-picture1.jpg);
 }
 
 .services__item:nth-child(2) {
-  background-image: url(/img/service-picture2.jpg);
+  background-image: url(../img/service-picture2.jpg);
 }
 
 .services__item:nth-child(3) {
-  background-image: url(/img/service-picture3.jpg);
+  background-image: url(../img/service-picture3.jpg);
 }
 
 .services__title {
@@ -1118,6 +1120,11 @@ html {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  -webkit-transition: .15s background-color;
+  transition: .15s background-color;
+  -webkit-box-shadow: 0 2px 5px 0 #333333, 0 3px 3px 0 #333333;
+          box-shadow: 0 2px 5px 0 #333333, 0 3px 3px 0 #333333;
+  cursor: pointer;
 }
 
 @media (min-width: 360px) {
@@ -1145,6 +1152,10 @@ html {
     font-size: 2.2rem;
     padding: 10px 25px;
   }
+}
+
+.services__btn:hover {
+  background-color: #2a637b;
 }
 
 .services__btn--active {
@@ -1205,14 +1216,14 @@ html {
   width: 80px;
   height: 182px;
   left: 3%;
-  background-image: url(/img/plant1.png);
+  background-image: url(../img/plant1.png);
 }
 
 .features::after {
   width: 103px;
   height: 182px;
   right: 3%;
-  background-image: url(/img/plant2.png);
+  background-image: url(../img/plant2.png);
 }
 
 .features__wrapper {
@@ -1262,13 +1273,13 @@ html {
 .features__wrapper::before {
   width: 142px;
   left: 30%;
-  background-image: url(/img/woman1.png);
+  background-image: url(../img/woman1.png);
 }
 
 .features__wrapper::after {
   width: 177px;
   right: 30%;
-  background-image: url(/img/woman2.png);
+  background-image: url(../img/woman2.png);
 }
 
 .features__item {
@@ -1326,7 +1337,7 @@ html {
 }
 
 .features__illustration-monitor {
-  background-image: url(/img/monitor-illustration.png);
+  background-image: url(../img/monitor-illustration.png);
   width: 140px;
 }
 
@@ -1355,7 +1366,7 @@ html {
 }
 
 .features__illustration-contact {
-  background-image: url(/img/contact-illustration.png);
+  background-image: url(../img/contact-illustration.png);
   width: 174px;
 }
 
@@ -1384,7 +1395,7 @@ html {
 }
 
 .features__illustration-satisfaction {
-  background-image: url(/img/satisfaction-illustration.png);
+  background-image: url(../img/satisfaction-illustration.png);
   width: 115px;
 }
 
@@ -1659,7 +1670,7 @@ html {
 
 .opinions {
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1667,7 +1678,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(/img/opinions-bg.jpg);
+  background-image: url(../img/opinions-bg.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -1720,8 +1731,8 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 5%;
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #000;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
   line-height: 1.7;
   -webkit-box-shadow: 0 2px 5px 0 #333333, 0 3px 3px 0 #333333;
           box-shadow: 0 2px 5px 0 #333333, 0 3px 3px 0 #333333;
@@ -1767,7 +1778,7 @@ html {
 
 @media (min-width: 1400px) {
   .opinions__opinion {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -1782,7 +1793,7 @@ html {
 
 .opinions__arrow-left {
   left: -10px;
-  background-image: url(/img/prev.png);
+  background-image: url(../img/prev.png);
   background-repeat: no-repeat;
 }
 
@@ -1806,7 +1817,7 @@ html {
 
 .opinions__arrow-right {
   right: -10px;
-  background-image: url(/img/next.png);
+  background-image: url(../img/next.png);
   background-repeat: no-repeat;
 }
 
@@ -1861,7 +1872,7 @@ html {
 
 @media (min-width: 1400px) {
   .opinions__author {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -1880,7 +1891,7 @@ html {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #ffffff;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   color: #000;
   font-weight: 700;
 }
@@ -1937,7 +1948,7 @@ html {
 .footer__logo {
   height: 150px;
   width: 140px;
-  background-image: url(/img/logo.png);
+  background-image: url(../img/logo.png);
   background-size: cover;
   background-position: center;
 }
@@ -1958,12 +1969,6 @@ html {
 .footer__signature {
   text-transform: uppercase;
   font-weight: 400;
-}
-
-@media (min-width: 360px) {
-  .footer__signature {
-    font-size: 1.6rem;
-  }
 }
 
 @media (min-width: 768px) {

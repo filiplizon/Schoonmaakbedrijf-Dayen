@@ -1,6 +1,7 @@
 .services {
     min-height: 100vh;
     padding-top: 20px;
+    padding-bottom: 20px;
 
     @include screen(big-desktop) {
         padding-bottom: 50px;
@@ -8,7 +9,7 @@
 
     &__heading {
         position: relative;
-        margin-top: 20px;
+        margin-top: 10px;
         font-size: $font-size-s;
         text-align: center;
         z-index: 2;
@@ -101,6 +102,7 @@
         background-size: cover;
         background-position: center;
         z-index: 0;
+        box-shadow: 5px 5px 20px;
         transition: transform .25s;
 
         @include screen(mobile) {
@@ -134,15 +136,15 @@
         }
 
         &:nth-child(1) {
-            background-image: url(/img/service-picture1.jpg);
+            background-image: url(../img/service-picture1.jpg);
         }
 
         &:nth-child(2) {
-            background-image: url(/img/service-picture2.jpg);
+            background-image: url(../img/service-picture2.jpg);
         }
 
         &:nth-child(3) {
-            background-image: url(/img/service-picture3.jpg);
+            background-image: url(../img/service-picture3.jpg);
         }
     }
 
@@ -214,19 +216,16 @@
         color: $color-white;
         border: 0;
         padding: 5px 20px;
-        // border-radius: 20px;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
-        // -webkit-border-radius: 20px;
-        // -moz-border-radius: 20px;
-        // -ms-border-radius: 20px;
-        // -o-border-radius: 20px;
+        transition: .15s background-color;
+        box-shadow: 0 2px 5px 0 #333333, 0 3px 3px 0 #333333;
+        cursor: pointer;
 
-
-        @include screen (mobile) {
+        @include screen(mobile) {
             font-size: $font-size-xs;
         }
 
@@ -245,6 +244,10 @@
             padding: 10px 25px;
         }
 
+
+        &:hover {
+            background-color: darken($color-secondary, 10%);
+        }
 
 
 
