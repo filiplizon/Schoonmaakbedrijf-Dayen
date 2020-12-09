@@ -12,6 +12,7 @@
     letter-spacing: 1px;
     transition: .25s;
     box-shadow: 0.6rem 0.6rem 0 0 $color-secondary, inset 0.6rem 0.6rem 0 $color-secondary;
+    cursor: pointer;
 
     &:hover,
     &:focus {

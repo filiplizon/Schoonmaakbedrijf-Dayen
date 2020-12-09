@@ -14,9 +14,9 @@
         text-align: center;
         z-index: 2;
 
-        // @include screen(mobile) {
-        //     font-size: $font-size-m;
-        // }
+        @include screen(tablet) {
+            font-size: $font-size-m;
+        }
 
         @include screen(desktop) {
             font-size: $font-size-l;
