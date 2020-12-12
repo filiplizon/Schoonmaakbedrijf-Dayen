@@ -13,6 +13,7 @@
         font-size: $font-size-s;
         text-align: center;
         z-index: 2;
+        opacity: 0;
 
         @include screen(tablet) {
             font-size: $font-size-m;
@@ -34,6 +35,7 @@
             left: 13%;
             background-color: $color-secondary;
             z-index: -1;
+
 
             @include screen(mobile) {
                 left: 14%;
@@ -58,12 +60,18 @@
         &--color {
             color: $color-white;
         }
+
+        &--appear {
+            animation: fadeIn .5s .5s both;
+            -webkit-animation: fadeIn .5s .5s both;
+        }
     }
 
     &__describtion {
         padding: 0 4%;
         margin: 20px auto;
         font-size: $font-size-xxs;
+        opacity: 0;
 
         @include screen(tablet) {
             width: 90%;
@@ -80,6 +88,10 @@
             line-height: 1.5;
         }
 
+        &--appear {
+            animation: fadeIn .5s 1s both;
+            -webkit-animation: fadeIn .5s 1s both;
+        }
     }
 
     &__wrapper {

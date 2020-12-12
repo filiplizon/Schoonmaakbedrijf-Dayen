@@ -19,6 +19,7 @@
         writing-mode: vertical-rl;
         text-orientation: upright;
         -webkit-text-orientation: upright;
+        z-index: 2;
 
         @include screen(tablet) {
             font-size: $font-size-xxs;
@@ -61,10 +62,11 @@
         margin-bottom: 10%;
         font-size: $font-size-xs;
         line-height: 1.5;
-
-        &--color {
-            color: $color-secondary;
-        }
+        transform: translateX(300%);
+        -webkit-transform: translateX(300%);
+        -moz-transform: translateX(300%);
+        -ms-transform: translateX(300%);
+        -o-transform: translateX(300%);
 
 
         @include screen(mobile) {
@@ -82,11 +84,19 @@
             font-size: $font-size-s;
             width: 40%;
             margin-bottom: 20px;
-            transform: translateX(140%);
-
+            position: absolute;
+            top: 15%;
+            left: 55%;
         }
 
+        &--color {
+            color: $color-secondary;
+        }
 
+        &--slide {
+            animation: slideInFromLeft 1.5s both;
+            -webkit-animation: slideInFromLeft 1.5s both;
+        }
     }
 
     &__text {
@@ -99,15 +109,14 @@
         word-break: break-word;
         z-index: 1;
 
-
         &::after {
             content: '';
-            width: 115%;
-            height: 110%;
+            width: 100%;
+            height: 100%;
             background-color: $color-secondary;
             position: absolute;
-            top: -5%;
-            left: -10%;
+            top: 0;
+            left: 0;
             z-index: -1;
 
 
@@ -136,24 +145,29 @@
             color: #000;
             line-height: 1.7;
             text-align: justify;
-            transform: translateX(140%);
-            -webkit-transform: translateX(140%);
-            -moz-transform: translateX(140%);
-            -ms-transform: translateX(140%);
-            -o-transform: translateX(140%);
+            position: absolute;
+            top: 35%;
+            left: 55%;
+        }
+
+        &--slide {
+            animation: none;
+
+            @include screen(big-desktop) {
+                animation: slideInFromLeft 1.5s .8s both;
+            }
         }
     }
 
     &__photo {
         width: 100%;
         height: 40vh;
-
         position: relative;
         background-image: url(../img/aboutus-bg.jpg);
         background-size: cover;
         background-position: center;
         box-shadow: none;
-
+        z-index: 1;
 
         @include screen(big-desktop) {
             width: 30%;
@@ -161,8 +175,15 @@
             top: -12%;
             left: 20%;
             margin-top: 15%;
-            box-shadow: -90px 90px 0 $color-secondary;
         }
 
+        &--active {
+            animation: none;
+
+            @include screen(big-desktop) {
+                animation: squareShadow 1s 1s both;
+                -webkit-animation: squareShadow 1s 1s both;
+            }
+        }
     }
 }

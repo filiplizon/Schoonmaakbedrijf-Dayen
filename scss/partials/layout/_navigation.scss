@@ -144,6 +144,7 @@
     }
 
     &__list {
+        pointer-events: none;
         height: 60%;
         width: 60%;
         position: absolute;
@@ -187,9 +188,11 @@
             width: 45%;
             left: 73%;
             padding: 0;
+            pointer-events: auto;
         }
 
         &--is-open {
+            pointer-events: auto;
             animation: fadeIn 1s .3s both;
             -webkit-animation: fadeIn 1s .3s both;
 
