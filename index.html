@@ -128,16 +128,15 @@
 
     <section class='opinions'>
         <div class="opinions__wrapper">
-            <!-- <h2 class="opinions__title">meningen</h2> -->
-            <p class="opinions__opinion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptates
-                totam blanditiis at omnis? Placeat?</p>
-            <div class="opinions__arrow opinions__arrow-left"></div>
-            <div class="opinions__arrow opinions__arrow-right"></div>
+            <p class="opinions__opinion"></p>
+            <button class="opinions__arrow opinions__arrow-left" data-direction="left"></button>
+            <button class="opinions__arrow opinions__arrow-right" data-direction="right"></button>
             <div class="opinions__author">
-                <p class="opinions__author-name">Adrie Lans</p>
-                <p class="opinions__author-company">Palletbedrijf LANS</p>
+                <p class="opinions__author-name"></p>
+                <p class="opinions__author-company"></p>
             </div>
-
+        </div>
+        <div class="opinions__counter-container"><span id="current-opinion"></span>/<span id="opinions-length"></span>
         </div>
     </section>
 
@@ -154,6 +153,7 @@
     </footer>
     <script src="js/navigation.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/opinions.js"></script>
 </body>
 
 </html>

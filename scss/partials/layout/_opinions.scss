@@ -88,7 +88,11 @@
         width: 45px;
         position: absolute;
         top: 50%;
+        border: none;
+        outline: none;
+        background-color: transparent;
         transform: translateY(-50%);
+        cursor: pointer;
 
         &-left {
             left: -10px;
@@ -148,6 +152,45 @@
 
         @include screen(big-desktop) {
             font-size: $font-size-xs;
+        }
+    }
+
+    &__counter-container {
+        width: 20%;
+        height: 5%;
+        position: absolute;
+        bottom: 4%;
+        left: 50%;
+        @include flexbox;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.65);
+        font-size: $font-size-xxs;
+        color: $color-white;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+
+        @include screen(mobile) {
+            font-size: $font-size-xs;
+        }
+
+        @include screen(tablet) {
+            width: 15%;
+            font-size: $font-size-s;
+        }
+
+        @include screen(desktop) {
+            font-size: $font-size-m;
+        }
+
+        @include screen(big-desktop) {
+            width: 8%;
+            height: 8%;
+            bottom: 6%;
+            font-size: $font-size-s;
         }
     }
 
