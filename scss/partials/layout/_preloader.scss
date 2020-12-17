@@ -1,0 +1,33 @@
+.preloader {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    @include flexbox;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(44, 158, 255);
+    background: radial-gradient(circle, rgba(44, 158, 255, 1) 0%, rgba(124, 190, 212, 1) 0%, rgba(88, 101, 255, 1) 100%);
+    z-index: 1000;
+
+    &__text {
+        color: $color-white;
+        font-size: $font-size-s;
+        transform: translateY(-600%);
+        -webkit-transform: translateY(-600%);
+        -moz-transform: translateY(-600%);
+        -ms-transform: translateY(-600%);
+        -o-transform: translateY(-600%);
+    }
+
+    &__image {
+        height: 200px;
+        width: 100px;
+        position: absolute;
+        background: url(../img/preloader.png);
+        background-position: center;
+        background-size: cover;
+        animation: sweep 1s infinite;
+        -webkit-animation: sweep 1s infinite;
+        transform-origin: top;
+    }
+}

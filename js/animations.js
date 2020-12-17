@@ -46,8 +46,8 @@ const addClassAfterScroll = () => {
     })
 }
 
-const startAnimations = () => {
-    window.addEventListener('scroll', addClassAfterScroll);
-}
+// const startAnimations = () => {
+window.addEventListener('scroll', addClassAfterScroll);
+// }
 
-window.addEventListener('load', startAnimations);
+// window.addEventListener('load', startAnimations);
