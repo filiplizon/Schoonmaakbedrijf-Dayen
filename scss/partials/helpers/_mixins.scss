@@ -37,3 +37,24 @@
         }
     }
 }
+
+@mixin orientation($direction) {
+
+    @if $direction==landscape {
+        @media #{$orientation-landscape} {
+            @content;
+        }
+    }
+
+    @if $direction==portrait {
+        @media #{$orientation-portrait} {
+            @content;
+        }
+    }
+}
+
+@mixin rwd($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+}

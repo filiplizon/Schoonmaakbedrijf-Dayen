@@ -7,14 +7,32 @@
 
     @include screen(mobile) {
         height: 190vh;
+
+        @include orientation(landscape) {
+            height: 330vh;
+        }
     }
 
     @include screen(tablet) {
         height: 165vh;
+
+        @include orientation(landscape) {
+            height: 345vh;
+        }
     }
 
     @include screen(desktop) {
         height: 175vh;
+
+        @include orientation(landscape) {
+            height: 280vh;
+        }
+    }
+
+    @include rwd(1365) {
+        @include orientation(landscape) {
+            height: 220vh;
+        }
     }
 
     @include screen(big-desktop) {
@@ -217,10 +235,24 @@
         @include screen(tablet) {
             font-size: $font-size-m;
             margin-top: 30px;
+
+            @include orientation(landscape) {
+                font-size: $font-size-s;
+            }
         }
 
         @include screen(desktop) {
             font-size: $font-size-l;
+
+            @include orientation(landscape) {
+                font-size: $font-size-m;
+            }
+        }
+
+        @include rwd(1365) {
+            @include orientation(landscape) {
+                font-size: $font-size-l;
+            }
         }
 
         @include screen(big-desktop) {
@@ -246,11 +278,25 @@
         @include screen(tablet) {
             padding: 0 20px;
             font-size: $font-size-xs;
+
+            @include orientation(landscape) {
+                font-size: $font-size-xxs;
+            }
         }
 
         @include screen(desktop) {
             font-size: $font-size-s;
             line-height: 2;
+
+            @include orientation(landscape) {
+                font-size: $font-size-xs;
+            }
+        }
+
+        @include rwd(1365) {
+            @include orientation(landscape) {
+                font-size: $font-size-s;
+            }
         }
 
         @include screen(big-desktop) {

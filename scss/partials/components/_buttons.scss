@@ -21,16 +21,33 @@
         box-shadow:
             0 0 0 0 $color-secondary,
             inset 12rem 7rem 0 0 $color-secondary, 0 0 10px lighten(black, 20%);
+
+        @include orientation(landscape) {
+            padding: 5px 15px;
+        }
     }
 
+    @include orientation(landscape) {
+        padding: 10px 15px 5px;
+    }
 
     @include screen(tablet) {
-        font-size: $font-size-xs;
+        font-size: $font-size-xxs;
         margin-top: 20px;
+
+        @include orientation(landscape) {
+            font-size: $font-size-xxs;
+        }
     }
 
     @include screen(desktop) {
         font-size: $font-size-s;
+    }
+
+    @include rwd(1365) {
+        @include orientation(landscape) {
+            font-size: $font-size-m;
+        }
     }
 
     @include screen(big-desktop) {

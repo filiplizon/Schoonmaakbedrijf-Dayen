@@ -10,16 +10,40 @@
     font-size: $font-size-xs;
     overflow: hidden;
 
+    @include screen(mobile) {
+        @include orientation(landscape) {
+            height: 90vh;
+
+        }
+    }
+
     @include screen(tablet) {
         height: 30vh;
         padding: 0px 60px;
         background-color: $color-secondary;
         color: $color-white;
         font-size: $font-size-s;
+
+        @include orientation(landscape) {
+            height: 60vh;
+            font-size: $font-size-xs;
+        }
     }
 
     @include screen(desktop) {
         font-size: $font-size-m;
+
+        @include orientation(landscape) {
+            height: 40vh;
+            font-size: $font-size-xs;
+        }
+    }
+
+    @include rwd(1365) {
+        @include orientation(landscape) {
+            height: 30vh;
+            font-size: $font-size-m;
+        }
     }
 
     @include screen(big-desktop) {
@@ -46,11 +70,20 @@
             0 20px 30px -20px rgba(0, 0, 0, 0.4),
             0 20px 20px -30px rgba(0, 0, 0, 0.3),
             0 20px 20px -5px $color-secondary;
+        z-index: 1;
+
+
 
         @include screen(mobile) {
             padding: 10px 40px;
             margin-bottom: 0;
             line-height: 2;
+
+            @include orientation(landscape) {
+                width: 40%;
+                height: 35%;
+                padding: 10px 20px;
+            }
         }
 
         @include screen(tablet) {
@@ -60,13 +93,33 @@
             color: $color-secondary;
             background-color: $color-white;
             border-color: $color-white;
+
+            @include orientation(landscape) {
+                width: 50%;
+                font-size: $font-size-xs;
+            }
         }
 
+        @include screen(desktop) {
+            @include orientation(landscape) {
+                height: 40%;
+                width: 45%;
+                font-size: $font-size-s;
+            }
+        }
 
+        @include rwd(1365) {
+            @include orientation(landscape) {
+                height: 50%;
+                width: 40%;
+                font-size: $font-size-m;
+            }
+        }
 
         @include screen(big-desktop) {
             width: 35%;
             padding: 10px 100px;
+            font-size: $font-size-s;
         }
 
 
@@ -77,6 +130,14 @@
             border-color: transparent $color-secondary transparent transparent;
             position: absolute;
             left: -15px;
+            z-index: -1;
+
+            @include screen(mobile) {
+
+                @include orientation(landscape) {
+                    border-width: 30px 30px 30px 0;
+                }
+            }
 
             @include screen (tablet) {
                 border-color: transparent $color-white transparent transparent;
@@ -95,13 +156,21 @@
         justify-content: space-beetwen;
         flex-direction: column;
 
+        @include screen(mobile) {
+            @include orientation(landscape) {
+                height: 20%;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+
+            }
+        }
+
         @include screen(tablet) {
             width: 100vw;
             height: 20%;
             flex-direction: row;
             justify-content: space-around;
-
-
         }
     }
 

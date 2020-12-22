@@ -23,6 +23,18 @@
 
         @include screen(tablet) {
             font-size: $font-size-xxs;
+
+            @include orientation(landscape) {
+                right: 3%;
+                font-size: 1rem;
+                letter-spacing: 0.5;
+            }
+        }
+
+        @include rwd(1365) {
+            @include orientation(landscape) {
+                font-size: $font-size-xxs;
+            }
         }
 
         @include screen(big-desktop) {
@@ -43,6 +55,10 @@
             @include screen(tablet) {
                 right: -60px;
                 width: 50px;
+
+                // @include orientation(landscape) {
+                //     width: 40px;
+                // }
             }
 
 
@@ -72,12 +88,36 @@
         @include screen(mobile) {
             line-height: 1.7;
             width: 90%;
+
+
+            @include orientation(landscape) {
+                margin-bottom: 0;
+                width: 70%;
+            }
         }
 
         @include screen(tablet) {
             font-size: $font-size-m;
             width: 70%;
             margin-bottom: 5%;
+
+            @include orientation(landscape) {
+                width: 65%;
+                font-size: $font-size-xs;
+                margin-bottom: 0;
+            }
+        }
+
+        @include screen(desktop) {
+            @include orientation(landscape) {
+                font-size: $font-size-s;
+            }
+        }
+
+        @include rwd(1365) {
+            @include orientation(landscape) {
+                font-size: $font-size-m;
+            }
         }
 
         @include screen(big-desktop) {
@@ -131,11 +171,25 @@
 
         @include screen(tablet) {
             font-size: $font-size-s;
+
+            @include orientation(landscape) {
+                font-size: $font-size-xxs;
+                line-height: 2;
+            }
         }
 
         @include screen(desktop) {
             line-height: 2.5;
 
+            @include orientation(landscape) {
+                font-size: $font-size-xs;
+            }
+        }
+
+        @include rwd(1365) {
+            @include orientation(landscape) {
+                font-size: $font-size-s;
+            }
         }
 
         @include screen(big-desktop) {
@@ -169,8 +223,21 @@
         box-shadow: none;
         z-index: 1;
 
+        @include screen(mobile) {
+            @include orientation(landscape) {
+                height: 90vh;
+            }
+        }
+
+        @include screen(tablet) {
+            @include orientation(landscape) {
+                height: 80vh;
+            }
+        }
+
         @include screen(big-desktop) {
             width: 30%;
+            height: 40%;
             position: absolute;
             top: -12%;
             left: 20%;

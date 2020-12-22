@@ -5,18 +5,40 @@
     align-items: center;
     justify-content: space-around;
     background-color: $color-white;
-    font-size: $font-size-xxs;
+    font-size: $font-size-xs;
     color: #000;
     font-weight: $bold;
 
+    @include screen(mobile) {
+        @include orientation(landscape) {
+            height: 80vh;
+            font-size: $font-size-xs;
+        }
+    }
+
     @include screen(tablet) {
+
         font-size: $font-size-s;
+
+        @include orientation(landscape) {
+            font-size: $font-size-xs;
+        }
     }
 
     @include screen(desktop) {
         height: 15vh;
         flex-direction: row-reverse;
         font-size: $font-size-m;
+
+        @include orientation(landscape) {
+            font-size: $font-size-s;
+        }
+    }
+
+    @include rwd(1365) {
+        @include orientation(landscape) {
+            font-size: $font-size-m;
+        }
     }
 
     @include screen(big-desktop) {
@@ -28,8 +50,6 @@
     &__link-mobile {
         @include flexbox;
         align-items: center;
-
-
     }
 
     &__icon {
@@ -54,9 +74,15 @@
         background-size: cover;
         background-position: center;
 
+
         @include screen(tablet) {
             height: 190px;
             width: 180px;
+
+            @include orientation(landscape) {
+                height: 130px;
+                width: 120px;
+            }
         }
 
         @include screen(desktop) {
@@ -69,14 +95,34 @@
         text-transform: uppercase;
         font-weight: $normal;
 
+        @include screen(mobile) {
+            @include orientation(landscape) {
 
+                font-size: $font-size-xxs;
+            }
+        }
 
         @include screen(tablet) {
             font-size: $font-size-xs;
+
+            @include orientation(landscape) {
+
+                font-size: $font-size-xxs;
+            }
         }
 
         @include screen(desktop) {
             font-size: $font-size-s;
+
+            @include orientation(landscape) {
+                font-size: $font-size-xs;
+            }
+        }
+
+        @include rwd(1365) {
+            @include orientation(landscape) {
+                font-size: $font-size-s;
+            }
         }
 
         @include screen(big-desktop) {

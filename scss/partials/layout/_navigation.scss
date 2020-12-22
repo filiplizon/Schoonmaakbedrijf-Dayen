@@ -9,6 +9,14 @@
     transition: height .3s ease-in-out, background-color .1s ease-in-out;
     z-index: 3;
 
+    @include screen(mobile) {
+
+
+        @include orientation(landscape) {
+            height: 17vh;
+        }
+    }
+
     @include screen(big-desktop) {
         background-color: transparent;
         opacity: 1;
@@ -28,19 +36,44 @@
         transition: transform .1s ease;
         cursor: pointer;
 
+
+
         @include screen(mobile) {
             width: 80px;
             height: 85px;
+
+            @include orientation(landscape) {
+                width: 47px;
+                height: 50px;
+            }
         }
 
         @include screen(tablet) {
             width: 120px;
             height: 130px;
+
+            @include orientation(landscape) {
+                width: 53px;
+                height: 57px;
+            }
         }
 
         @include screen(desktop) {
             width: 160px;
             height: 170px;
+
+            @include orientation(landscape) {
+                width: 100px;
+                height: 110px;
+
+            }
+        }
+
+        @include rwd(1365) {
+            @include orientation(landscape) {
+                width: 140px;
+                height: 150px;
+            }
         }
 
         @include screen(big-desktop) {
@@ -77,14 +110,33 @@
             rotate(0deg);
         -webkit-transform: rotate(0deg) translateY(-50%);
 
+        @include screen(mobile) {
+
+            @include orientation(landscape) {
+                width: 25px;
+                height: 15px;
+                top: 8%;
+            }
+        }
+
         @include screen(tablet) {
             width: 50px;
             height: 40px;
+
+            @include orientation(landscape) {
+                width: 35px;
+                height: 25px;
+            }
         }
 
         @include screen(desktop) {
             width: 60px;
             height: 50px;
+
+            @include orientation(landscape) {
+                width: 50px;
+                height: 40px;
+            }
         }
 
         @include screen(big-desktop) {
@@ -167,15 +219,33 @@
 
         @include screen(mobile) {
             font-size: $font-size-xs;
+
+            @include orientation(landscape) {
+                height: 40%;
+                width: 85%;
+                margin-top: 0;
+                flex-direction: row;
+                font-size: $font-size-xxs;
+            }
         }
 
         @include screen(tablet) {
             font-size: $font-size-s;
+
+            @include orientation(landscape) {
+                font-size: $font-size-xxs;
+            }
         }
 
         @include screen(desktop) {
             font-size: $font-size-m;
+
+            @include orientation(landscape) {
+                font-size: $font-size-s;
+            }
         }
+
+
 
         @include screen(big-desktop) {
             flex-direction: row;
@@ -219,6 +289,10 @@
         padding: 20px 40px;
         text-decoration: none;
         color: #000;
+
+        @include orientation(landscape) {
+            padding: 5px 5px;
+        }
 
         @include screen(desktop) {
             padding: 20px 30px;
