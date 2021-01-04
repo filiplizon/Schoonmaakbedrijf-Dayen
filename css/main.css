@@ -1092,7 +1092,7 @@ html {
   right: -9%;
   height: 330px;
   width: 300px;
-  background-image: url("../img/header-background.png");
+  background-image: url("../img/header-background.webp");
   background-size: cover;
   background-position: center;
   z-index: 1000;
@@ -1734,15 +1734,15 @@ html {
 }
 
 .services__item:nth-child(1) {
-  background-image: url(../img/service-picture1.jpg);
+  background-image: url(../img/service-picture1.webp);
 }
 
 .services__item:nth-child(2) {
-  background-image: url(../img/service-picture2.jpg);
+  background-image: url(../img/service-picture2.webp);
 }
 
 .services__item:nth-child(3) {
-  background-image: url(../img/service-picture3.jpg);
+  background-image: url(../img/service-picture3.webp);
 }
 
 .services__title {
