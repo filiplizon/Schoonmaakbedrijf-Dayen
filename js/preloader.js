@@ -3,4 +3,4 @@ function hidePreloader() {
     preloader.style.display = 'none';
 }
 
-// window.addEventListener('load', () => setTimeout(hidePreloader, 500));
+window.addEventListener('load', hidePreloader);

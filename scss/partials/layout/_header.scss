@@ -129,7 +129,7 @@
             background-color: $color-white;
             position: absolute;
             bottom: 0;
-            animation: grow 1.5s 1.5s both;
+            animation: grow 1.5s .5s both;
 
             @include screen(big-desktop) {
                 background-color: #000;
@@ -158,7 +158,7 @@
         top: 52%;
         left: -7%;
         transform-origin: left 50%;
-        animation: grow 2s 1.5s both;
+        animation: grow 2s .5s both;
 
         @include screen(mobile) {
             width: 95px;
@@ -198,7 +198,7 @@
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         -o-transform: rotate(45deg);
-        animation: squareIn 2s 1.5s both;
+        animation: squareIn 2s .5s both;
 
         @include screen(mobile) {
             width: 45px;
