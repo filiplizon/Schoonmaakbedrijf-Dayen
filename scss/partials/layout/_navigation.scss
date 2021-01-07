@@ -26,46 +26,49 @@
     &__logo {
         width: 65px;
         height: 70px;
-        position: fixed;
+        position: absolute;
         left: 8%;
-        top: 1%;
+        top: calc((100% - 65px) / 2);
         background-image: url('../img/logo.png');
         background-position: center;
         background-size: cover;
         z-index: -3;
-        transition: transform .1s ease;
+        transition: transform .1s ease .3s;
         cursor: pointer;
-
-
 
         @include screen(mobile) {
             width: 80px;
             height: 85px;
+            top: calc((100% - 85px) / 2);
 
             @include orientation(landscape) {
                 width: 47px;
                 height: 50px;
+                top: calc((100% - 50px) / 2);
             }
         }
 
         @include screen(tablet) {
             width: 120px;
             height: 130px;
+            top: calc((100% - 130px) / 2);
 
             @include orientation(landscape) {
                 width: 53px;
                 height: 57px;
+                top: calc((100% - 57px) / 2);
             }
         }
 
         @include screen(desktop) {
             width: 160px;
             height: 170px;
+            top: calc((100% - 170px) / 2);
 
             @include orientation(landscape) {
                 width: 100px;
                 height: 110px;
-
+                top: calc((100% - 110px) / 2);
             }
         }
 
@@ -73,6 +76,7 @@
             @include orientation(landscape) {
                 width: 140px;
                 height: 150px;
+                top: calc((100% - 150px) / 2);
             }
         }
 
@@ -80,15 +84,34 @@
             width: 100px;
             height: 110px;
             left: 4%;
-            top: 2%;
+            top: calc((100% - 110px) / 2);
+            transform: translateY(25px);
+            transition: transform .1s ease;
+            -webkit-transition: transform .1s ease;
+            -moz-transition: transform .1s ease;
+            -ms-transition: transform .1s ease;
+            -o-transition: transform .1s ease;
         }
 
         &--small {
-            transform: translateY(-33px) scale(0.6);
+            transform: translateY(0) scale(0.6);
             display: none;
 
             @include screen(big-desktop) {
                 display: block;
+            }
+        }
+
+        &--is-open {
+            opacity: 0;
+            transform: scale(0);
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+
+            @include screen(big-desktop) {
+                display: none;
             }
         }
 
@@ -100,6 +123,7 @@
         position: fixed;
         top: 7%;
         right: 8%;
+        border: none;
         -webkit-transition: .5s ease-in-out;
         -moz-transition: .5s ease-in-out;
         -o-transition: .5s ease-in-out;

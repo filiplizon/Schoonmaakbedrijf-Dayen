@@ -13,6 +13,7 @@ const openMenu = () => {
     menuButton.classList.toggle('nav__menu--is-open');
     nav.classList.toggle('nav--is-open');
     menuList.classList.toggle('nav__list--is-open');
+    navLogo.classList.toggle('nav__logo--is-open');
 }
 
 const showNumber = (e) => {
@@ -54,8 +55,11 @@ function scrollToElement(selector) {
 }
 
 const scrollToTarget = (e) => {
-    e.preventDefault();
     let option = e.target.dataset.option;
+    if (option == undefined) {
+        return true;
+    }
+    e.preventDefault();
     openMenu();
     scrollToElement(`.${option}`);
 }
@@ -85,6 +89,6 @@ navLinks.forEach((Link) => {
 menuButton.addEventListener('click', openMenu);
 
 if (viewportWidth > 1400) {
-    navMobileButton.addEventListener('click', showNumber)
+    navMobileButton.addEventListener('click', showNumber);
     window.addEventListener('scroll', modifyNav);
 }
