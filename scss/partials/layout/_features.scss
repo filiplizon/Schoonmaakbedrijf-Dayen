@@ -146,17 +146,6 @@
             height: 225px;
         }
 
-        &--slide-in-from-top {
-            animation: slideInFromTop 1s .5s both;
-            -webkit-animation: slideInFromTop 1s .5s both;
-
-
-            // @include screen(big-desktop) {
-            //     animation: slideInFromTop 1s .5s both;
-            //     -webkit-animation: slideInFromTop 1s .5s both;
-            // }
-
-        }
 
         &-monitor {
             background-image: url(../img/monitor-illustration.png);
@@ -223,6 +212,7 @@
         }
     }
 
+
     &__title {
         margin: 10px 0;
         font-size: $font-size-xs;
@@ -259,10 +249,15 @@
             font-size: $font-size-s;
         }
 
-        // &--slide-in-from-bottom {
-        //     animation: slideInFromBottom .5s .5s both;
-        //     -webkit-animation: slideInFromBottom .5s .5s both;
-        // }
+        &--slide-in-from-right {
+            animation: slideInFromRight 1s both;
+            -webkit-animation: slideInFromRight 1s both;
+
+            @include screen(big-desktop) {
+                animation: none;
+                -webkit-animation: none;
+            }
+        }
     }
 
     &__text {
@@ -304,9 +299,14 @@
             line-height: 1.5;
         }
 
-        &--slide-in-from-bottom {
-            animation: slideInFromBottom 1s .5s both;
-            -webkit-animation: slideInFromBottom 1s .5s both;
+        &--slide-in-from-right {
+            animation: slideInFromRight 1s .5s both;
+            -webkit-animation: slideInFromRight 1s .5s both;
+
+            @include screen(big-desktop) {
+                animation: none;
+                -webkit-animation: none;
+            }
         }
     }
 }

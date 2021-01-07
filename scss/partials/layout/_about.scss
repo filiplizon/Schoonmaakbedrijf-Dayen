@@ -1,6 +1,6 @@
 .about {
     position: relative;
-    min-height: 100vh;
+    // min-height: 100vh;
 
     padding: 30px 0 0;
     background-color: $color-white;
@@ -125,7 +125,7 @@
             width: 40%;
             margin-bottom: 20px;
             position: absolute;
-            top: 15%;
+            top: 13%;
             left: 55%;
         }
 
@@ -134,8 +134,8 @@
         }
 
         &--slide {
-            animation: slideInFromLeft 1.5s both;
-            -webkit-animation: slideInFromLeft 1.5s both;
+            animation: slideInFromRight 1.5s both;
+            -webkit-animation: slideInFromRight 1.5s both;
         }
     }
 
@@ -195,12 +195,12 @@
         @include screen(big-desktop) {
             width: 40%;
             padding: 0 4%;
-            font-size: $font-size-xs;
+            font-size: $font-size-xxs;
             color: #000;
-            line-height: 1.7;
+            line-height: 2.7;
             text-align: justify;
             position: absolute;
-            top: 35%;
+            top: 32%;
             left: 55%;
         }
 
@@ -208,7 +208,7 @@
             animation: none;
 
             @include screen(big-desktop) {
-                animation: slideInFromLeft 1.5s .8s both;
+                animation: slideInFromRight 1.5s .8s both;
             }
         }
     }
@@ -217,15 +217,12 @@
         width: 100%;
         height: 40vh;
         position: relative;
-        background-image: url(../img/aboutus-bg.jpg);
-        background-size: cover;
-        background-position: center;
         box-shadow: none;
         z-index: 1;
 
         @include screen(mobile) {
             @include orientation(landscape) {
-                height: 90vh;
+                height: 100vh;
             }
         }
 

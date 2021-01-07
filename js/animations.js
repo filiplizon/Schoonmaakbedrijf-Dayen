@@ -6,7 +6,6 @@ const servicesText = document.querySelector('.services__describtion');
 const about = document.querySelector('.about');
 const services = document.querySelector('.services');
 const features = document.querySelector('.features');
-const illustrations = document.querySelectorAll('.features__illustration');
 const featuresHeadings = document.querySelectorAll('.features__title');
 const featuresTexts = document.querySelectorAll('.features__text');
 
@@ -34,14 +33,14 @@ const addClassAfterScroll = () => {
         servicesHeading.classList.add('services__heading--appear');
         servicesText.classList.add('services__describtion--appear');
     }
-    illustrations.forEach((illustration) => {
-        if (isAnyPartOfElementInViewport(illustration)) {
-            illustration.classList.add('features__illustration--slide-in-from-top');
+    featuresHeadings.forEach((heading) => {
+        if (isAnyPartOfElementInViewport(heading)) {
+            heading.classList.add('features__title--slide-in-from-right');
         }
     })
     featuresTexts.forEach((text) => {
         if (isAnyPartOfElementInViewport(text)) {
-            text.classList.add('features__text--slide-in-from-bottom');
+            text.classList.add('features__text--slide-in-from-right');
         }
     })
 }
