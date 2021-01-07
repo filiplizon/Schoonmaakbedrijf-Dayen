@@ -4,11 +4,15 @@
     position: relative;
     @include flexbox;
     align-items: center;
-    background-image: url(../img/opinions-bg.jpg);
+    background-image: url();
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     overflow: hidden;
+
+    &.visible {
+        background-image: url(../img/opinions-bg.jpg);
+    }
 
     &__wrapper {
         width: 100%;

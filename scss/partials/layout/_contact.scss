@@ -200,4 +200,12 @@
             font-size: $font-size-l;
         }
     }
+
+    &__mobile-number {
+        color: $color-secondary;
+
+        @include screen(big-desktop) {
+            color: $color-white;
+        }
+    }
 }

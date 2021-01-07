@@ -235,81 +235,70 @@
             -webkit-animation: none;
         }
     }
-}
 
-.hero {
-    position: absolute;
-    bottom: 0;
-    right: -9%;
-    height: 330px;
-    width: 300px;
-    background-image: url('../img/header-background.webp');
-    background-size: cover;
-    background-position: center;
-    z-index: 1000;
 
-    &::after {
-        content: '';
-        height: 1px;
-        width: 70vw;
+    &__hero {
         position: absolute;
-        top: -48%;
-        right: 0;
-        background-color: $color-white;
-        display: none;
+        bottom: 0;
+        right: -43%;
+        height: 350px;
+        width: 525px;
+        z-index: 1;
+
+        @include screen(mobile) {
+            height: 370px;
+            width: 555px;
+            right: -35%;
+
+            @include height(700) {
+                height: 460px;
+                width: 690px;
+                right: -44%;
+            }
+
+            @include orientation(landscape) {
+                height: 280px;
+                width: 420px;
+                right: -10%;
+            }
+        }
+
+        @include screen(tablet) {
+            height: 625px;
+            width: 938px;
+            right: -30%;
+
+
+            @include orientation(landscape) {
+                height: 320px;
+                width: 480px;
+                right: -5%;
+            }
+        }
 
         @include screen(desktop) {
-            display: block;
+            height: 800px;
+            width: 1200px;
+
+
+            @include orientation(landscape) {
+                height: 612px;
+                width: 918px;
+                right: -20%;
+            }
         }
-    }
 
-
-
-
-    @include screen(mobile) {
-        height: 400px;
-        width: 370px;
-        right: -12%;
-
-        @include orientation(landscape) {
-            height: 295px;
-            width: 290px;
-            right: 1%;
+        @include rwd(1365) {
+            @include orientation(landscape) {
+                height: 820px;
+                width: 1230px;
+            }
         }
-    }
 
-    @include screen(tablet) {
-        height: 600px;
-        width: 570px;
-        right: -7%;
-
-
-        @include orientation(landscape) {
-            height: 320px;
-            width: 460px;
+        @include screen(big-desktop) {
+            height: 650px;
+            width: 975px;
+            right: -10%;
         }
-    }
-
-    @include screen(desktop) {
-        height: 800px;
-        width: 770px;
-
-        @include orientation(landscape) {
-            height: 612px;
-            width: 670px;
-        }
-    }
-
-    @include rwd(1365) {
-        @include orientation(landscape) {
-            height: 820px;
-            width: 855px;
-        }
-    }
-
-    @include screen(big-desktop) {
-        height: 650px;
-        width: 870px;
-        right: -4%;
     }
 }

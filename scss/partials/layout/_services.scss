@@ -208,16 +208,28 @@
             z-index: -1;
         }
 
-        &:nth-child(1) {
-            background-image: url(../img/service-picture1.webp)
+        &-1 {
+            background-image: url();
+
+            &.visible {
+                background-image: url(../img/service-picture1.webp);
+            }
         }
 
-        &:nth-child(2) {
-            background-image: url(../img/service-picture2.webp);
+        &-2 {
+            background-image: url();
+
+            &.visible {
+                background-image: url(../img/service-picture2.webp);
+            }
         }
 
-        &:nth-child(3) {
-            background-image: url(../img/service-picture3.webp);
+        &-3 {
+            background-image: url();
+
+            &.visible {
+                background-image: url(../img/service-picture3.webp);
+            }
         }
     }
 

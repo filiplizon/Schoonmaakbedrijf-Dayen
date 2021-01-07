@@ -58,3 +58,10 @@
         @content;
     }
 }
+
+
+@mixin height($screen) {
+    @media (min-height: $screen+'px') {
+        @content;
+    }
+}

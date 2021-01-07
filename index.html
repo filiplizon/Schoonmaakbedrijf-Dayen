@@ -22,11 +22,11 @@
     </div>
     <nav class="nav">
         <div class="nav__logo"></div>
-        <div class="nav__menu">
+        <button class="nav__menu">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
         <ul class="nav__list">
             <li class="nav__item"><a href="#" class='nav__link' data-option='header'>home</a></li>
             <li class="nav__item"><a href="#" class='nav__link' data-option='about'>over ons</a></li>
@@ -35,23 +35,22 @@
             <li class="nav__item"><a href="tel:+31684481736" class='nav__link nav__link-mobile'><i
                         class="nav__icon fas fa-mobile-alt"></i><span class="nav__icon-number">+31 684481736</span></a>
             </li>
+
+
         </ul>
     </nav>
 
     <header class="header">
-        <div class="hero"></div>
+        <img src="img/header-background.webp" alt="Smiling cleaner with work accessories" class="header__hero">
         <h1 class="header__title">Schoonmaakdiensten <span class="header__title--color">op het hoogste niveau</span>
         </h1>
         <p class="header__text">leer ons beter kennen</p>
         <button class="btn"><span class="btn__text">Bekijk meer</span>
-            <!-- <i
-                class="btn__arrow fas fa-long-arrow-alt-right"></i> -->
         </button>
     </header>
 
     <section class="about">
         <div class="about__nav">over ons</div>
-
         <h3 class="about__heading">Wij zorgen voor een <span class="about__heading--color">uitgebreide schoonmaak</span>
             van kantoren en bedrijfspanden.</h3>
         <p class="about__text">Een professioneel kantoorreinigingsbedrijf zorgt ervoor dat u zich nooit zorgen hoeft te
@@ -59,7 +58,7 @@
             werkplek bijdraagt ​​aan meer efficiëntie en effectiviteit! Zorg er nu voor dat u uw klanten altijd
             zorgeloos kunt ontvangen, zonder na te denken of het kantoor netjes is. Wij zorgen ervoor dat uw bedrijf
             elke dag schoon is!</p>
-        <div class="about__photo"></div>
+        <img src="img/aboutus-bg.jpg" alt="Cleaning the sink" class="about__photo"></img>
     </section>
 
     <main class="services">
@@ -68,18 +67,18 @@
             similique porro ea enim quis quibusdam voluptatum corporis sapiente quia.
         </p>
         <div class="services__wrapper">
-            <div class="services__item">
+            <div class="services__item services__item-1 lazy-background">
                 <h3 class="services__title">Kantoorschoonmaak </h3>
                 <p class="services__text"></p>
                 <button class="services__btn">Bekijk meer</button>
             </div>
-            <div class="services__item">
+            <div class="services__item services__item-2 lazy-background">
                 <h3 class="services__title">Schoonmaak van restaurants en kantines</h3>
                 <p class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio impedit
                     deserunt expedita illo minus totam.</p>
                 <button class="services__btn">Bekijk meer</button>
             </div>
-            <div class="services__item">
+            <div class="services__item services__item-3 lazy-background">
                 <h3 class="services__title">Schoonmaken van huizen en appartementen</h3>
                 <p class="services__text"></p>
                 <button class="services__btn">Bekijk meer</button>
@@ -133,7 +132,7 @@
         </div>
     </div>
 
-    <section class='opinions'>
+    <section class='opinions lazy-background'>
         <div class="opinions__wrapper">
             <p class="opinions__opinion"></p>
             <button class="opinions__arrow opinions__arrow-left" data-direction="left"></button>
@@ -158,6 +157,7 @@
 
         </div>
     </footer>
+    <script src="js/lazyLoad.js"></script>
     <script src="js/preloader.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/animations.js"></script>
