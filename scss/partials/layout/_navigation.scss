@@ -93,15 +93,6 @@
             -o-transition: transform .1s ease;
         }
 
-        &--small {
-            transform: translateY(0) scale(0.6);
-            display: none;
-
-            @include screen(big-desktop) {
-                display: block;
-            }
-        }
-
         &--is-open {
             opacity: 0;
             transform: scale(0);
@@ -111,10 +102,23 @@
             -o-transform: scale(0);
 
             @include screen(big-desktop) {
-                display: none;
+                opacity: 1;
+                transform: scale(1) translateY(25px);
+                -webkit-transform: scale(1) translateY(25px);
+                -moz-transform: scale(1) translateY(25px);
+                -ms-transform: scale(1) translateY(25px);
+                -o-transform: scale(1) translateY(25px);
             }
         }
 
+        &--small {
+            transform: translateY(0) scale(0.6);
+            display: none;
+
+            @include screen(big-desktop) {
+                display: block;
+            }
+        }
     }
 
     &__menu {
