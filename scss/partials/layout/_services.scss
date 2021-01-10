@@ -50,7 +50,6 @@
             background-color: $color-secondary;
             z-index: -1;
 
-
             @include screen(mobile) {
                 left: 14%;
 
@@ -126,7 +125,6 @@
                 font-size: $font-size-s;
             }
         }
-
 
         @include screen(big-desktop) {
             font-size: $font-size-xs;
@@ -252,7 +250,6 @@
             font-size: $font-size-s;
         }
 
-
         @include screen (tablet) {
             font-size: $font-size-m;
 
@@ -302,8 +299,6 @@
         -moz-transform: translateX(-50%) scale(0);
         -ms-transform: translateX(-50%) scale(0);
         -o-transform: translateX(-50%) scale(0);
-
-
     }
 
     &__btn {
@@ -348,7 +343,6 @@
             }
         }
 
-
         @include rwd(1365) {
             @include orientation(landscape) {
                 font-size: $font-size-m;
@@ -356,18 +350,14 @@
             }
         }
 
-
         @include screen (big-desktop) {
             font-size: $font-size-xs;
             padding: 10px 25px;
         }
 
-
         &:hover {
             background-color: darken($color-secondary, 10%);
         }
-
-
 
         &--active {
             transform: translate(-50%, 170%);

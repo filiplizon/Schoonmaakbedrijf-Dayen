@@ -1,5 +1,4 @@
 .features {
-    // min-height: 100vh;
     height: 175vh;
     position: relative;
     background: linear-gradient(to bottom, $color-secondary -150%, $color-white 100%);
@@ -107,7 +106,6 @@
             right: 30%;
             background-image: url(../img/woman2.png);
         }
-
     }
 
     &__item {
@@ -146,11 +144,9 @@
             height: 225px;
         }
 
-
         &-monitor {
             background-image: url(../img/monitor-illustration.png);
             width: 140px;
-
 
             @include screen(mobile) {
                 width: 214px;

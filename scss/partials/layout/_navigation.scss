@@ -10,8 +10,6 @@
     z-index: 3;
 
     @include screen(mobile) {
-
-
         @include orientation(landscape) {
             height: 17vh;
         }
@@ -139,7 +137,6 @@
         -webkit-transform: rotate(0deg) translateY(-50%);
 
         @include screen(mobile) {
-
             @include orientation(landscape) {
                 width: 25px;
                 height: 15px;
@@ -273,8 +270,6 @@
             }
         }
 
-
-
         @include screen(big-desktop) {
             flex-direction: row;
             opacity: 1;
@@ -301,9 +296,6 @@
 
         }
     }
-
-
-
 
     &__item {
         width: 100%;
@@ -353,7 +345,6 @@
             font-size: $font-size-xxs;
             opacity: 1;
 
-
             &--is-selected {
                 display: block;
             }
@@ -372,15 +363,11 @@
         }
     }
 
-
     &--is-open {
         height: 100vh;
 
         @include screen (big-desktop) {
             height: 10vh;
-
         }
     }
-
-
 }

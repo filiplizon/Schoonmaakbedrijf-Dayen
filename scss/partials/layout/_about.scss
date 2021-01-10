@@ -1,13 +1,10 @@
 .about {
     position: relative;
-    // min-height: 100vh;
-
     padding: 30px 0 0;
     background-color: $color-white;
     overflow: hidden;
 
     @include screen(big-desktop) {
-
         height: 90vh;
         padding: 60px 0;
     }
@@ -40,8 +37,6 @@
             right: 95%;
         }
 
-
-
         &::after {
             content: '';
             width: 20px;
@@ -54,13 +49,7 @@
             @include screen(tablet) {
                 right: -60px;
                 width: 50px;
-
-                // @include orientation(landscape) {
-                //     width: 40px;
-                // }
             }
-
-
 
             @include screen(big-desktop) {
                 height: 100%;
@@ -68,7 +57,6 @@
                 right: -2px;
             }
         }
-
     }
 
     &__heading {
@@ -83,11 +71,9 @@
         -ms-transform: translateX(300%);
         -o-transform: translateX(300%);
 
-
         @include screen(mobile) {
             line-height: 1.7;
             width: 90%;
-
 
             @include orientation(landscape) {
                 margin-bottom: 0;
@@ -158,7 +144,6 @@
             left: 0;
             z-index: -1;
 
-
             @include screen(big-desktop) {
                 display: none;
             }
@@ -216,7 +201,6 @@
         width: 100%;
         height: 35vh;
         position: relative;
-
         box-shadow: none;
         z-index: 1;
 

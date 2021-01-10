@@ -9,14 +9,10 @@ const features = document.querySelector('.features');
 const featuresHeadings = document.querySelectorAll('.features__title');
 const featuresTexts = document.querySelectorAll('.features__text');
 
-
 function isAnyPartOfElementInViewport(el) {
-
     const rect = el.getBoundingClientRect();
-
     const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
     const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
-
     const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
     const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
 
@@ -45,8 +41,4 @@ const addClassAfterScroll = () => {
     })
 }
 
-// const startAnimations = () => {
 window.addEventListener('scroll', addClassAfterScroll);
-// }
-
-// window.addEventListener('load', startAnimations);

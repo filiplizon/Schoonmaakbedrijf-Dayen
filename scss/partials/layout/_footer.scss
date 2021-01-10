@@ -17,7 +17,6 @@
     }
 
     @include screen(tablet) {
-
         font-size: $font-size-s;
 
         @include orientation(landscape) {
@@ -45,8 +44,6 @@
         font-size: $font-size-xs;
     }
 
-
-
     &__link-mobile {
         @include flexbox;
         align-items: center;
@@ -65,15 +62,12 @@
         }
     }
 
-
-
     &__logo {
         height: 150px;
         width: 140px;
         background-image: url(../img/logo.png);
         background-size: cover;
         background-position: center;
-
 
         @include screen(tablet) {
             height: 190px;
@@ -91,13 +85,11 @@
     }
 
     &__signature {
-
         text-transform: uppercase;
         font-weight: $normal;
 
         @include screen(mobile) {
             @include orientation(landscape) {
-
                 font-size: $font-size-xxs;
             }
         }
@@ -106,7 +98,6 @@
             font-size: $font-size-xs;
 
             @include orientation(landscape) {
-
                 font-size: $font-size-xxs;
             }
         }
@@ -129,6 +120,4 @@
             font-size: $font-size-xxs;
         }
     }
-
-
 }
