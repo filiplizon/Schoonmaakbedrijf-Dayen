@@ -107,19 +107,27 @@
         </div>
     </section>
     <div class="contact">
-        <p class="contact__label">Heb je nog vragen?
-            Neem contact op :)
-        </p>
-        <div class="contact__options">
-            <div class="contact__option">
-                <i class="contact__icon fas fa-mobile-alt"></i>
-                <a href="tel:+31684481736" class="contact__mobile-number">+31 684681736</a>
-            </div>
-            <div class="contact__option">
-                <i class="contact__icon far fa-envelope"></i>
-                <p class="contact__mail">Dajana.Franke27@gmail.com</p>
-            </div>
+        <div class="contact__wrapper">
+            <p class="contact__heading">Heb je nog vragen?
+                Bel ons :)
+            </p>
+            <a href="tel:+31684481736" class="contact__phone"><i class="contact__icon fas fa-mobile-alt"></i>
+                <p>
+                    +31 684681736
+                </p>
+            </a>
+            <p class="contact__heading contact__heading-mail">Stuur ons desgewenst een bericht <i
+                    class="fas fa-arrow-circle-right"></i></p>
         </div>
+        <form action="" class="contact__form">
+            <label for="name" class="contact__label">Uw naam:</label>
+            <input type="text" id="name" class="contact__input" placeholder="naam" required>
+            <label for="mail" class="contact__label">Jouw email:</label>
+            <input type="email" id="mail" class="contact__input" placeholder="email" required>
+            <label for="message" class="contact__label">Jouw bericht:</label>
+            <textarea id="message" class="contact__textarea" placeholder="bericht" required></textarea>
+            <input type="submit" value="Sturen" class=" contact__btn">
+        </form>
     </div>
     <section class='opinions lazy-background'>
         <div class="opinions__wrapper">
