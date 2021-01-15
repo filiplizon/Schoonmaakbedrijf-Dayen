@@ -190,11 +190,19 @@
         }
 
         &:hover {
-            transform: scale(1.02);
-            -webkit-transform: scale(1.02);
-            -moz-transform: scale(1.02);
-            -ms-transform: scale(1.02);
-            -o-transform: scale(1.02);
+            transform: scale(1.00);
+            -webkit-transform: scale(1.00);
+            -moz-transform: scale(1.00);
+            -ms-transform: scale(1.00);
+            -o-transform: scale(1.00);
+
+            @include screen(big-desktop) {
+                transform: scale(1.02);
+                -webkit-transform: scale(1.02);
+                -moz-transform: scale(1.02);
+                -ms-transform: scale(1.02);
+                -o-transform: scale(1.02);
+            }
         }
 
         &::before {
@@ -229,28 +237,44 @@
                 background-image: url(../img/service-picture3.webp);
             }
         }
+
+        &-wrapper {
+            width: 100%;
+            height: 100%;
+            @include flexbox;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
     }
 
     &__title {
-        width: 90%;
-        position: absolute;
-        left: 50%;
-        top: 30%;
+        width: 75%;
         font-size: $font-size-xs;
         color: $color-white;
         text-align: center;
         z-index: 2;
-        transform: translatex(-50%);
-        -webkit-transform: translatex(-50%);
-        -moz-transform: translatex(-50%);
-        -ms-transform: translatex(-50%);
-        -o-transform: translatex(-50%);
+        transform: translatey(100%);
+        -webkit-transform: translatey(100%);
+        -moz-transform: translatey(100%);
+        -ms-transform: translatey(100%);
+        -o-transform: translatey(100%);
+        transition: transform .4s ease;
 
-        @include screen (mobile) {
-            font-size: $font-size-s;
+        @include screen(mobile) {
+            width: 70%;
+            transform: translateY(150%);
+
+            @include height(700) {
+                width: 81%;
+                font-size: $font-size-s;
+                transform: translateY(100%);
+            }
         }
 
         @include screen (tablet) {
+            width: 60%;
             font-size: $font-size-m;
 
             @include orientation(landscape) {
@@ -263,6 +287,7 @@
 
             @include orientation(landscape) {
                 font-size: $font-size-m;
+                width: 45%;
             }
         }
 
@@ -273,59 +298,87 @@
         }
 
         @include screen (big-desktop) {
+            width: 75%;
             font-size: $font-size-s;
+            transform: translateY(200%);
         }
 
-        &--active {
-            transform: translate(-50%, -120%);
-            -webkit-transform: translate(-50%, -120%);
-            -moz-transform: translate(-50%, -120%);
-            -ms-transform: translate(-50%, -120%);
-            -o-transform: translate(-50%, -120%);
+        &--up {
+            transform: translateY(0);
         }
     }
 
     &__text {
-        width: 90%;
-        position: absolute;
-        top: 35%;
-        left: 50%;
+        width: 75%;
         margin: 0 auto;
         font-size: $font-size-xxs;
         color: $color-white;
-        line-height: 1.4;
-        transform: translateX(-50%) scale(0);
-        -webkit-transform: translateX(-50%) scale(0);
-        -moz-transform: translateX(-50%) scale(0);
-        -ms-transform: translateX(-50%) scale(0);
-        -o-transform: translateX(-50%) scale(0);
+        line-height: 1.7;
+        text-align: center;
+        transform: scale(0);
+        transition: transform .4s ease;
+
+        @include screen(mobile) {
+            @include height(700) {
+                font-size: $font-size-xs;
+            }
+        }
+
+        @include screen (tablet) {
+            font-size: $font-size-s;
+
+            @include orientation(landscape) {
+                font-size: $font-size-xs;
+            }
+        }
+
+        @include screen (desktop) {
+            font-size: $font-size-m;
+
+            @include orientation(landscape) {
+                font-size: $font-size-s;
+            }
+        }
+
+        @include rwd(1365) {
+            @include orientation(landscape) {
+                font-size: $font-size-m;
+            }
+        }
+
+        @include screen (big-desktop) {
+            font-size: $font-size-xs;
+        }
+
+        &--appear {
+            transform: scale(0.8);
+        }
     }
 
     &__btn {
-        position: absolute;
-        top: 60%;
-        left: 50%;
         background-color: $color-secondary;
         font-size: $font-size-xxs;
         color: $color-white;
         border: 0;
         padding: 5px 20px;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
+        transform: translateY(-200%);
         transition: .15s background-color;
         box-shadow: 0 2px 5px 0 #333333, 0 3px 3px 0 #333333;
+        transition: transform .4s ease;
         cursor: pointer;
 
         @include screen(mobile) {
-            font-size: $font-size-xs;
+            transform: translateY(-260%);
+
+            @include height(700) {
+                font-size: $font-size-xs;
+            }
         }
 
         @include screen (tablet) {
             font-size: $font-size-s;
             padding: 10px 25px;
+            transform: translateY(-200%);
 
             @include orientation(landscape) {
                 font-size: $font-size-xs;
@@ -353,18 +406,19 @@
         @include screen (big-desktop) {
             font-size: $font-size-xs;
             padding: 10px 25px;
+            transform: translateY(-300%);
+            -webkit-transform: translateY(-300%);
+            -moz-transform: translateY(-300%);
+            -ms-transform: translateY(-300%);
+            -o-transform: translateY(-300%);
         }
 
         &:hover {
             background-color: darken($color-secondary, 10%);
         }
 
-        &--active {
-            transform: translate(-50%, 170%);
-            -webkit-transform: translate(-50%, 150%);
-            -moz-transform: translate(-50%, 170%);
-            -ms-transform: translate(-50%, 170%);
-            -o-transform: translate(-50%, 170%);
+        &--down {
+            transform: translateY(0);
         }
     }
 }
