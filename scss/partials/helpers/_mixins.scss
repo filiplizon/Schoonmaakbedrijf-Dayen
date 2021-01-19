@@ -31,6 +31,12 @@
         }
     }
 
+    @else if $size==large {
+        @media #{$large} {
+            @content;
+        }
+    }
+
     @else {
         @media #{$size} {
             @content;

@@ -37,6 +37,10 @@
             right: 95%;
         }
 
+        @include screen(tablet) {
+            font-size: $font-size-xs;
+        }
+
         &::after {
             content: '';
             width: 20px;
@@ -114,6 +118,10 @@
             left: 55%;
         }
 
+        @include screen(large) {
+            font-size: $font-size-m;
+        }
+
         &--color {
             color: $color-secondary;
         }
@@ -186,6 +194,10 @@
             position: absolute;
             top: 32%;
             left: 55%;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-xs;
         }
 
         &--slide {

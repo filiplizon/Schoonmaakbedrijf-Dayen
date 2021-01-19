@@ -148,6 +148,10 @@
             font-size: $font-size-s;
             width: 60%;
         }
+
+        @include screen(large) {
+            font-size: $font-size-m;
+        }
     }
 
     &__phone {
@@ -199,6 +203,10 @@
             font-size: $font-size-xs;
             height: 20%;
         }
+
+        @include screen(large) {
+            font-size: $font-size-s;
+        }
     }
 
     &__icon {
@@ -236,6 +244,10 @@
 
         @include screen(big-desktop) {
             font-size: $font-size-s;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-m;
         }
     }
 
@@ -315,6 +327,10 @@
         @include screen(big-desktop) {
             font-size: $font-size-xs;
         }
+
+        @include screen(large) {
+            font-size: $font-size-s;
+        }
     }
 
     &__input {
@@ -357,6 +373,10 @@
 
         @include screen(big-desktop) {
             font-size: $font-size-xxs;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-xs;
         }
     }
 
@@ -401,6 +421,10 @@
         @include screen(big-desktop) {
             font-size: $font-size-xxs;
         }
+
+        @include screen(large) {
+            font-size: $font-size-xs;
+        }
     }
 
     &__btn {
@@ -444,6 +468,10 @@
 
         @include screen(big-desktop) {
             font-size: $font-size-xs;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-s;
         }
 
         &:hover {

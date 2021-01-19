@@ -54,4 +54,8 @@
         font-size: $font-size-xs;
         margin-top: 30px;
     }
+
+    @include screen(large) {
+        font-size: $font-size-s;
+    }
 }

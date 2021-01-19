@@ -41,6 +41,10 @@
             font-size: $font-size-m;
         }
 
+        @include screen(large) {
+            font-size: $font-size-l;
+        }
+
         &::before {
             content: '';
             width: 30%;
@@ -132,6 +136,10 @@
             line-height: 1.5;
         }
 
+        @include screen(large) {
+            font-size: $font-size-s;
+        }
+
         &--appear {
             animation: fadeIn .5s 1s both;
             -webkit-animation: fadeIn .5s 1s both;
@@ -187,6 +195,10 @@
         @include screen(big-desktop) {
             height: 70vh;
             width: 30%;
+        }
+
+        @include screen(large) {
+            height: 60vh;
         }
 
         &:hover {
@@ -303,6 +315,11 @@
             transform: translateY(200%);
         }
 
+        @include screen(large) {
+            width: 80%;
+            font-size: $font-size-m;
+        }
+
         &--up {
             transform: translateY(0);
         }
@@ -348,6 +365,10 @@
 
         @include screen (big-desktop) {
             font-size: $font-size-xs;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-s;
         }
 
         &--appear {
@@ -411,6 +432,10 @@
             -moz-transform: translateY(-300%);
             -ms-transform: translateY(-300%);
             -o-transform: translateY(-300%);
+        }
+
+        @include screen(large) {
+            font-size: $font-size-s;
         }
 
         &:hover {

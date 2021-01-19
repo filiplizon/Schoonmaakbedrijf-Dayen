@@ -284,6 +284,10 @@
             pointer-events: auto;
         }
 
+        @include screen(large) {
+            font-size: $font-size-xs;
+        }
+
         &--is-open {
             pointer-events: auto;
             animation: fadeIn 1s .3s both;
@@ -360,6 +364,10 @@
 
         @include screen (big-desktop) {
             font-size: $font-size-s;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-m;
         }
     }
 

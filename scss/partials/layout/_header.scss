@@ -71,6 +71,11 @@
             color: black;
             line-height: 1.5;
         }
+
+        @include screen(large) {
+            font-size: $font-size-l;
+            margin-top: 17%;
+        }
     }
 
     &__text {
@@ -117,6 +122,10 @@
             font-size: $font-size-s;
             color: black;
             margin-top: 30px;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-m;
         }
 
         &::before {
@@ -287,6 +296,11 @@
             height: 650px;
             width: 975px;
             right: -10%;
+        }
+
+        @include screen(large) {
+            height: 900px;
+            width: 1350px;
         }
     }
 }

@@ -98,6 +98,10 @@
         @include screen(big-desktop) {
             font-size: $font-size-xs;
         }
+
+        @include screen(large) {
+            font-size: $font-size-s;
+        }
     }
 
     &__arrow {
@@ -133,6 +137,10 @@
             @include screen(big-desktop) {
                 left: 45px;
             }
+
+            @include screen(large) {
+                left: 85px;
+            }
         }
 
         &-right {
@@ -156,6 +164,10 @@
 
             @include screen(big-desktop) {
                 right: 45px;
+            }
+
+            @include screen(large) {
+                right: 85px;
             }
         }
     }
@@ -199,6 +211,10 @@
 
         @include screen(big-desktop) {
             font-size: $font-size-xs;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-m;
         }
     }
 
