@@ -37,7 +37,7 @@
             right: 95%;
         }
 
-        @include screen(tablet) {
+        @include screen(large) {
             font-size: $font-size-xs;
         }
 
