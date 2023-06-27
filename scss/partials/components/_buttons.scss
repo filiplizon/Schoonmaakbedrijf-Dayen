@@ -1,18 +1,17 @@
 .btn {
   display: block;
-  position: relative;
   padding: 15px 20px 10px;
   margin-top: 10px;
-  border: 2px solid $color-secondary;
+  width: 50%;
   background-color: $color-white;
   color: $color-black;
   font-weight: $normal;
-  text-align: left;
+  font-size: $font-size-xxs;
+  text-align: center;
   letter-spacing: 1px;
   transition: 0.25s;
-  box-shadow: 0.6rem 0.6rem 0 0 $color-secondary,
-    inset 0.6rem 0.6rem 0 $color-secondary;
-  cursor: pointer;
+  box-shadow: 0.7rem 0.7rem 0 0 $color-secondary,
+    inset 0.7rem 0.7rem 0 $color-secondary;
   z-index: 1000;
 
   &:hover,
@@ -20,19 +19,21 @@
     padding: 10px 20px;
     color: $color-white;
     box-shadow: 0 0 0 0 $color-secondary, inset 12rem 7rem 0 0 $color-secondary,
-      0 0 10px lighten(black, 20%);
+      0 0 2px lighten(black, 20%);
 
     @include orientation(landscape) {
-      padding: 5px 15px;
+      padding: 10px 15px;
     }
   }
 
   @include orientation(landscape) {
-    padding: 10px 15px 5px;
+    padding: 15px 15px 10px;
+    width: 25%;
   }
 
   @include screen(tablet) {
-    font-size: $font-size-s;
+    width: 30%;
+    font-size: $font-size-xs;
     margin-top: 20px;
 
     @include orientation(landscape) {
@@ -41,18 +42,8 @@
   }
 
   @include screen(desktop) {
-    font-size: $font-size-s;
-  }
-
-  @include rwd(1365) {
-    @include orientation(landscape) {
-      font-size: $font-size-m;
-    }
-  }
-
-  @include screen(big-desktop) {
+    width: 18%;
     font-size: $font-size-xs;
-    margin-top: 30px;
   }
 
   @include screen(large) {

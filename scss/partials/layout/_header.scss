@@ -1,306 +1,264 @@
 .header {
-    position: relative;
-    height: 100vh;
-    padding-top: 30px;
-    padding-left: 8%;
-    background-color: $color-primary;
-    overflow: hidden;
-    z-index: 1;
+  position: relative;
+  height: 100vh;
+  padding-top: 12vh;
+  padding: 0 20px;
+  background-color: $color-primary;
+  overflow: hidden;
+  z-index: 1;
+
+  @include screen(big-desktop) {
+    background: linear-gradient(
+      to right,
+      $color-white 0%,
+      $color-white 40%,
+      $color-primary 40%,
+      $color-primary 100%
+    );
+    padding-left: 4%;
+  }
+
+  &__title {
+    width: 80%;
+    color: $color-white;
+    font-size: $font-size-s;
+    font-weight: $bold;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    margin-top: 20vh;
+
+    &--color {
+      color: $color-secondary;
+    }
+
+    @include orientation(landscape) {
+      width: 35%;
+      margin-top: 13%;
+      font-size: $font-size-xs;
+    }
+
+    @include screen(tablet) {
+      font-size: $font-size-l;
+      margin-top: 25%;
+
+      @include orientation(landscape) {
+        font-size: $font-size-m;
+        margin-top: 10%;
+      }
+    }
+
+    @include screen(desktop) {
+      font-size: $font-size-xl;
+      line-height: 1.2;
+      margin-top: 25%;
+
+      @include orientation(landscape) {
+        width: 50%;
+        font-size: $font-size-m;
+      }
+    }
 
     @include screen(big-desktop) {
-        background: linear-gradient(to right, $color-white 0%, $color-white 40%, $color-primary 40%, $color-primary 100%);
-        padding-left: 4%;
+      width: 25%;
+      margin-top: 16%;
+      font-size: $font-size-m;
+      color: $color-black;
     }
 
-    &__title {
-        width: 75%;
-        color: $color-white;
-        font-size: $font-size-xs;
-        font-weight: $bold;
-        line-height: 1.5;
-        margin-top: 25%;
-
-        &--color {
-            color: $color-secondary;
-        }
-
-        @include screen(mobile) {
-            font-size: $font-size-s;
-            margin-top: 30%;
-
-            @include orientation(landscape) {
-                width: 50%;
-                margin-top: 13%;
-                font-size: $font-size-xs;
-            }
-        }
-
-        @include screen(tablet) {
-            font-size: $font-size-l;
-            margin-top: 20%;
-
-            @include orientation(landscape) {
-                width: 50%;
-                margin-top: 10%;
-                font-size: $font-size-s;
-            }
-        }
-
-        @include screen(desktop) {
-            font-size: $font-size-xl;
-            line-height: 1.2;
-            margin-top: 25%;
-
-            @include orientation(landscape) {
-                width: 50%;
-                margin-top: 25%;
-                font-size: $font-size-l;
-            }
-        }
-
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                font-size: $font-size-xl;
-            }
-        }
-
-        @include screen(big-desktop) {
-            width: 26%;
-            margin-top: 15%;
-            font-size: $font-size-m;
-            color: black;
-            line-height: 1.5;
-        }
-
-        @include screen(large) {
-            font-size: $font-size-l;
-            margin-top: 17%;
-        }
+    @include screen(large) {
+      font-size: $font-size-l;
+      margin-top: 17%;
     }
+  }
 
-    &__text {
-        position: relative;
-        display: inline-block;
-        color: $color-white;
-        font-size: $font-size-xxs;
-        margin-top: 10px;
-        padding-bottom: 5px;
-
-        @include screen(mobile) {
-            font-size: $font-size-xs;
-            margin-top: 5px;
-
-            @include orientation(landscape) {
-                font-size: $font-size-xxs;
-            }
-        }
-
-        @include screen(tablet) {
-            font-size: $font-size-m;
-            margin-top: 10px;
-
-            @include orientation(landscape) {
-                font-size: $font-size-xs;
-            }
-        }
-
-        @include screen(desktop) {
-            font-size: $font-size-l;
-
-            @include orientation(landscape) {
-                font-size: $font-size-m;
-            }
-        }
-
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                font-size: $font-size-l;
-            }
-        }
-
-        @include screen(big-desktop) {
-            font-size: $font-size-s;
-            color: black;
-            margin-top: 30px;
-        }
-
-        @include screen(large) {
-            font-size: $font-size-m;
-        }
-
-        &::before {
-            content: '';
-            height: 2px;
-            width: 100%;
-            background-color: $color-white;
-            position: absolute;
-            bottom: 0;
-            animation: grow 1.5s .5s both;
-
-            @include screen(big-desktop) {
-                background-color: #000;
-            }
-        }
-    }
-
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        border: 1px solid $color-white;
-
-        @include screen(mobile) {
-            @include orientation(landscape) {
-                display: none;
-            }
-        }
-    }
+  &__text {
+    position: relative;
+    display: inline-block;
+    color: $color-white;
+    font-size: $font-size-xs;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     &::before {
-        width: 85px;
-        height: 85px;
-        top: 52%;
-        left: -7%;
-        transform-origin: left 50%;
-        animation: grow 2s .5s both;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: $color-white;
+      position: absolute;
+      bottom: -5px;
+      animation: grow 1.5s 0.5s both;
 
-        @include screen(mobile) {
-            width: 95px;
-            height: 95px;
-        }
-
-        @include screen(tablet) {
-            width: 300px;
-            height: 730px;
-        }
-
-        @include screen(desktop) {
-            width: 400px;
-            height: 730px;
-
-            @include orientation(landscape) {
-                width: 390px;
-                height: 320px;
-                top: 70%;
-            }
-        }
-
-        @include screen(big-desktop) {
-            display: none;
-        }
+      @include screen(big-desktop) {
+        background-color: $color-black;
+      }
     }
 
-    &::after {
-        width: 30px;
-        height: 30px;
-        right: 10%;
-        top: 35%;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        animation: squareIn 2s .5s both;
-
-        @include screen(mobile) {
-            width: 45px;
-            height: 45px;
-        }
-
-        @include screen(tablet) {
-            width: 75px;
-            height: 75px;
-            right: 10%;
-        }
-
-        @include screen(desktop) {
-            width: 95px;
-            height: 95px;
-
-            @include orientation(landscape) {
-                right: 30%;
-            }
-        }
-
-        @include screen(big-desktop) {
-            display: block;
-            width: 500px;
-            height: 500px;
-            right: 47%;
-            top: 85%;
-            background: #fff;
-            border-color: transparent;
-            z-index: -1;
-            animation: none;
-            -webkit-animation: none;
-        }
+    @include orientation(landscape) {
+      font-size: $font-size-xxs;
     }
 
-    &__hero {
-        position: absolute;
-        bottom: 0;
-        right: -43%;
-        height: 350px;
-        width: 525px;
-        z-index: 1;
+    @include screen(tablet) {
+      font-size: $font-size-m;
+      margin-top: 10px;
 
-        @include screen(mobile) {
-            height: 370px;
-            width: 555px;
-            right: -35%;
-
-            @include height(700) {
-                height: 460px;
-                width: 690px;
-                right: -44%;
-            }
-
-            @include orientation(landscape) {
-                height: 280px;
-                width: 420px;
-                right: -10%;
-            }
-        }
-
-        @include screen(tablet) {
-            height: 625px;
-            width: 938px;
-            right: -30%;
-
-            @include orientation(landscape) {
-                height: 320px;
-                width: 480px;
-                right: -5%;
-            }
-        }
-
-        @include screen(desktop) {
-            height: 800px;
-            width: 1200px;
-
-            @include orientation(landscape) {
-                height: 612px;
-                width: 918px;
-                right: -20%;
-            }
-        }
-
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                height: 820px;
-                width: 1230px;
-            }
-        }
-
-        @include screen(big-desktop) {
-            height: 650px;
-            width: 975px;
-            right: -10%;
-        }
-
-        @include screen(large) {
-            height: 900px;
-            width: 1350px;
-        }
+      @include orientation(landscape) {
+        font-size: $font-size-xs;
+      }
     }
+
+    @include screen(desktop) {
+      font-size: $font-size-m;
+
+      @include orientation(landscape) {
+        font-size: $font-size-m;
+      }
+    }
+
+    @include screen(big-desktop) {
+      font-size: $font-size-s;
+      color: $color-black;
+      margin-top: 15px;
+    }
+
+    @include screen(large) {
+      font-size: $font-size-m;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border: 1px solid $color-white;
+
+    @include screen(mobile) {
+      @include orientation(landscape) {
+        display: none;
+      }
+    }
+  }
+
+  &::before {
+    width: 85px;
+    height: 85px;
+    top: 52%;
+    left: -7%;
+    transform-origin: left 50%;
+    animation: grow 2s 0.5s both;
+
+    @include screen(mobile) {
+      width: 95px;
+      height: 95px;
+    }
+
+    @include screen(tablet) {
+      width: 300px;
+      height: 730px;
+    }
+
+    @include screen(desktop) {
+      width: 400px;
+      height: 730px;
+
+      @include orientation(landscape) {
+        width: 390px;
+        height: 320px;
+        top: 70%;
+      }
+    }
+
+    @include screen(big-desktop) {
+      display: none;
+    }
+  }
+
+  &::after {
+    width: 30px;
+    height: 30px;
+    right: 10%;
+    top: 35%;
+    transform: rotate(45deg);
+    animation: squareIn 2s 0.5s both;
+
+    @include screen(mobile) {
+      width: 45px;
+      height: 45px;
+    }
+
+    @include screen(tablet) {
+      width: 75px;
+      height: 75px;
+      right: 10%;
+    }
+
+    @include screen(desktop) {
+      width: 95px;
+      height: 95px;
+
+      @include orientation(landscape) {
+        right: 30%;
+      }
+    }
+
+    @include screen(big-desktop) {
+      display: block;
+      width: 500px;
+      height: 500px;
+      right: 47%;
+      top: 85%;
+      background: #fff;
+      border-color: transparent;
+      z-index: -1;
+      animation: none;
+    }
+  }
+
+  &__hero {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: auto;
+    right: -35%;
+    z-index: 1;
+
+    @include orientation(landscape) {
+      height: 280px;
+      width: 420px;
+      right: -10%;
+    }
+
+    @include screen(tablet) {
+      height: 625px;
+      width: 938px;
+      right: -30%;
+
+      @include orientation(landscape) {
+        height: 320px;
+        width: 480px;
+        right: -5%;
+      }
+    }
+
+    @include screen(desktop) {
+      height: 800px;
+      width: 1200px;
+
+      @include orientation(landscape) {
+        height: 612px;
+        width: 918px;
+        right: -20%;
+      }
+    }
+
+    @include screen(big-desktop) {
+      height: 650px;
+      width: 975px;
+      right: -10%;
+    }
+
+    @include screen(large) {
+      height: 900px;
+      width: 1350px;
+    }
+  }
 }
