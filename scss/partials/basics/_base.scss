@@ -1,18 +1,19 @@
 html {
-    box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+  scroll-behavior: smooth;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 a {
-    text-decoration: none;
-    color: #000000;
+  text-decoration: none;
+  color: #000000;
 }
 
 ::placeholder {
-    color: darken($color-white, 30%);
+  color: darken($color-white, 30%);
 }
