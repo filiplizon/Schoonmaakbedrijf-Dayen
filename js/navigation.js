@@ -8,7 +8,10 @@ let viewportWidth = window.innerWidth;
 const changeNavigationVisibility = () => {
   menuButton.classList.toggle("nav__menu--is-open");
   navigationList.classList.toggle("nav__list--is-open");
-  if (navigationList.classList.contains("nav__list--is-open")) {
+  if (
+    navigationList.classList.contains("nav__list--is-open") &&
+    viewportWidth < 1024
+  ) {
     document.body.style.overflow = "hidden";
   } else {
     document.body.style.overflow = "unset";

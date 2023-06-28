@@ -1,249 +1,192 @@
 .about {
-    position: relative;
-    padding: 30px 0 0;
-    background-color: $color-white;
-    overflow: hidden;
+  position: relative;
+  padding: 12vh 0 0;
+  background-color: $color-white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+
+  @include orientation(landscape) {
+    padding-top: 17vh;
+  }
+
+  @include screen(big-desktop) {
+    height: 100vh;
+    padding-top: 10vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    -webkit-text-orientation: upright;
+
+    @include screen(tablet) {
+      font-size: $font-size-xxs;
+
+      @include orientation(landscape) {
+        right: 3%;
+        font-size: 1rem;
+        letter-spacing: 0.5;
+      }
+    }
 
     @include screen(big-desktop) {
-        height: 90vh;
-        padding: 60px 0;
+      right: 95%;
+      top: 20%;
+      font-size: $font-size-xxs;
     }
 
-    &__nav {
-        position: absolute;
-        right: 5%;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        -webkit-text-orientation: upright;
-        z-index: 2;
+    &::after {
+      content: "";
+      width: 20px;
+      height: 100%;
+      background-color: $color-secondary;
+      position: absolute;
+      top: 0;
+      right: -21px;
 
-        @include screen(tablet) {
-            font-size: $font-size-xxs;
+      @include screen(tablet) {
+        right: -60px;
+        width: 50px;
+      }
 
-            @include orientation(landscape) {
-                right: 3%;
-                font-size: 1rem;
-                letter-spacing: 0.5;
-            }
-        }
+      @include screen(big-desktop) {
+        height: 100%;
+        width: 20px;
+        right: 20px;
+      }
+    }
+  }
 
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                font-size: $font-size-xxs;
-            }
-        }
+  &__heading {
+    margin-bottom: 10%;
+    font-size: $font-size-xs;
+    padding: 0 20px;
 
-        @include screen(big-desktop) {
-            right: 95%;
-        }
-
-        @include screen(large) {
-            font-size: $font-size-xs;
-        }
-
-        &::after {
-            content: '';
-            width: 20px;
-            height: 100%;
-            background-color: $color-secondary;
-            position: absolute;
-            top: 0;
-            right: -21px;
-
-            @include screen(tablet) {
-                right: -60px;
-                width: 50px;
-            }
-
-            @include screen(big-desktop) {
-                height: 100%;
-                width: 1px;
-                right: -2px;
-            }
-        }
+    @include orientation(landscape) {
+      margin-bottom: 0;
     }
 
-    &__heading {
-        width: 85%;
-        padding: 0 4%;
-        margin-bottom: 10%;
+    @include screen(tablet) {
+      font-size: $font-size-m;
+      margin-bottom: 5%;
+
+      @include orientation(landscape) {
         font-size: $font-size-xs;
-        line-height: 1.5;
-        transform: translateX(300%);
-        -webkit-transform: translateX(300%);
-        -moz-transform: translateX(300%);
-        -ms-transform: translateX(300%);
-        -o-transform: translateX(300%);
-
-        @include screen(mobile) {
-            line-height: 1.7;
-            width: 90%;
-
-            @include orientation(landscape) {
-                margin-bottom: 0;
-                width: 70%;
-            }
-        }
-
-        @include screen(tablet) {
-            font-size: $font-size-m;
-            width: 70%;
-            margin-bottom: 5%;
-
-            @include orientation(landscape) {
-                width: 65%;
-                font-size: $font-size-xs;
-                margin-bottom: 0;
-            }
-        }
-
-        @include screen(desktop) {
-            @include orientation(landscape) {
-                font-size: $font-size-s;
-            }
-        }
-
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                font-size: $font-size-m;
-            }
-        }
-
-        @include screen(big-desktop) {
-            font-size: $font-size-s;
-            width: 40%;
-            margin-bottom: 20px;
-            position: absolute;
-            top: 13%;
-            left: 55%;
-        }
-
-        @include screen(large) {
-            font-size: $font-size-m;
-        }
-
-        &--color {
-            color: $color-secondary;
-        }
-
-        &--slide {
-            animation: slideInFromRight 1.5s both;
-            -webkit-animation: slideInFromRight 1.5s both;
-        }
+        margin-bottom: 0;
+      }
     }
 
-    &__text {
-        position: relative;
-        margin-top: 30px;
-        padding: 5% 4%;
+    @include screen(desktop) {
+      @include orientation(landscape) {
+        font-size: $font-size-s;
+      }
+    }
+
+    @include rwd(1365) {
+      @include orientation(landscape) {
+        font-size: $font-size-m;
+      }
+    }
+
+    @include screen(big-desktop) {
+      font-size: $font-size-s;
+    }
+
+    @include screen(large) {
+      font-size: $font-size-m;
+    }
+
+    &--color {
+      color: $color-secondary;
+    }
+
+    &--slide {
+      animation: slideInFromRight 1s both;
+      -webkit-animation: slideInFromRight 1s both;
+    }
+  }
+
+  &__text {
+    margin-top: 30px;
+    font-size: $font-size-xxs;
+    color: $color-white;
+    background-color: $color-secondary;
+    word-break: break-word;
+    padding: 20px;
+
+    &-container {
+      line-height: 1.7;
+      @include screen(big-desktop) {
+        width: 40%;
+        margin-left: 50px;
+      }
+    }
+
+    @include screen(tablet) {
+      font-size: $font-size-s;
+
+      @include orientation(landscape) {
         font-size: $font-size-xxs;
-        color: $color-white;
-        line-height: 1.5;
-        word-break: break-word;
-        z-index: 1;
-
-        &::after {
-            content: '';
-            width: 100%;
-            height: 100%;
-            background-color: $color-secondary;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-
-            @include screen(big-desktop) {
-                display: none;
-            }
-        }
-
-        @include screen(mobile) {
-            line-height: 1.7;
-        }
-
-        @include screen(tablet) {
-            font-size: $font-size-s;
-
-            @include orientation(landscape) {
-                font-size: $font-size-xxs;
-                line-height: 2;
-            }
-        }
-
-        @include screen(desktop) {
-            line-height: 2.5;
-
-            @include orientation(landscape) {
-                font-size: $font-size-xs;
-            }
-        }
-
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                font-size: $font-size-s;
-            }
-        }
-
-        @include screen(big-desktop) {
-            width: 40%;
-            padding: 0 4%;
-            font-size: $font-size-xxs;
-            color: #000;
-            line-height: 2.7;
-            text-align: justify;
-            position: absolute;
-            top: 32%;
-            left: 55%;
-        }
-
-        @include screen(large) {
-            font-size: $font-size-xs;
-        }
-
-        &--slide {
-            animation: none;
-
-            @include screen(big-desktop) {
-                animation: slideInFromRight 1.5s .8s both;
-            }
-        }
+        line-height: 2;
+      }
     }
 
-    &__photo {
-        width: 100%;
-        height: 35vh;
-        position: relative;
-        box-shadow: none;
-        z-index: 1;
-
-        @include screen(mobile) {
-            @include orientation(landscape) {
-                height: 100vh;
-            }
-        }
-
-        @include screen(tablet) {
-            @include orientation(landscape) {
-                height: 80vh;
-            }
-        }
-
-        @include screen(big-desktop) {
-            width: 30%;
-            height: 40%;
-            position: absolute;
-            top: -12%;
-            left: 20%;
-            margin-top: 15%;
-        }
-
-        &--active {
-            animation: none;
-
-            @include screen(big-desktop) {
-                animation: squareShadow 1s 1s both;
-                -webkit-animation: squareShadow 1s 1s both;
-            }
-        }
+    @include screen(desktop) {
+      @include orientation(landscape) {
+        font-size: $font-size-xs;
+      }
     }
+
+    @include screen(big-desktop) {
+      margin-top: 0;
+      font-size: $font-size-xxs;
+      color: $color-black;
+      background-color: $color-white;
+    }
+
+    @include screen(large) {
+      font-size: $font-size-xs;
+    }
+
+    &--slide {
+      @include screen(big-desktop) {
+        animation: slideInFromRight 1s 0.5s both;
+      }
+    }
+  }
+
+  &__photo {
+    width: auto;
+    height: 35vh;
+    position: relative;
+    box-shadow: none;
+    z-index: 1;
+
+    @include orientation(landscape) {
+      width: 50%;
+      height: auto;
+    }
+
+    @include screen(big-desktop) {
+      width: 400px;
+      height: auto;
+      margin-bottom: 100px;
+      margin-left: 100px;
+    }
+
+    &--active {
+      @include screen(big-desktop) {
+        animation: squareShadow 1s 1s both;
+        -webkit-animation: squareShadow 1s 1s both;
+      }
+    }
+  }
 }
