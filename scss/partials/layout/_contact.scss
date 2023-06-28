@@ -1,41 +1,26 @@
 .contact {
-  height: 130vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding: 20px 10px;
-  margin: 30px 0;
-  color: #035e8c;
+  justify-content: center;
+  padding: 20px 0 40px;
+  color: $color-secondary;
 
-  @include screen(mobile) {
-    height: 140vh;
-
-    @include orientation(landscape) {
-      height: 180vh;
-      margin: 20px 0;
-    }
+  @include orientation(landscape) {
+    margin: 20px 0;
   }
 
   @include screen(tablet) {
-    height: 120vh;
-
     @include orientation(landscape) {
-      height: 190vh;
       margin: 20px 0;
-    }
-  }
-
-  @include screen(desktop) {
-    @include orientation(landscape) {
-      height: 140vh;
     }
   }
 
   @include screen(big-desktop) {
-    height: 80vh;
     flex-direction: row;
+    justify-content: space-around;
     margin: 0;
     background-image: url(../img/contact-bg.webp);
     background-position: center;
@@ -45,7 +30,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -5%;
+    top: 0;
     left: 0;
     height: 20px;
     width: 100%;
@@ -59,31 +44,6 @@
       #ffffff 0,
       #ffffff 50%
     );
-    z-index: 1;
-
-    @include screen(mobile) {
-      top: -4%;
-
-      @include height(700) {
-        top: -2%;
-      }
-
-      @include orientation(landscape) {
-        top: -5%;
-      }
-    }
-
-    @include screen(tablet) {
-      top: -2%;
-
-      @include orientation(landscape) {
-        top: -5%;
-      }
-    }
-
-    @include screen(desktop) {
-      top: -1%;
-    }
 
     @include screen(big-desktop) {
       display: none;
@@ -98,12 +58,6 @@
     align-items: center;
     justify-content: space-around;
 
-    @include screen(mobile) {
-      @include height(700) {
-        height: 40%;
-      }
-    }
-
     @include screen(big-desktop) {
       height: 60%;
       left: 7%;
@@ -111,23 +65,18 @@
   }
 
   &__heading {
-    width: 70%;
-    font-size: $font-size-xs;
+    font-size: $font-size-s;
     text-align: center;
     line-height: 1.7;
+    margin-top: 20px;
+    margin-bottom: 10px;
 
-    @include screen(mobile) {
-      width: 75%;
-      font-size: $font-size-s;
-
-      @include orientation(landscape) {
-        width: 65%;
-        font-size: $font-size-xs;
-      }
+    @include orientation(landscape) {
+      margin-top: 20px;
+      font-size: $font-size-xs;
     }
 
     @include screen(tablet) {
-      width: 65%;
       font-size: $font-size-m;
 
       @include orientation(landscape) {
@@ -139,20 +88,13 @@
       font-size: $font-size-l;
 
       @include orientation(landscape) {
-        width: 60%;
         font-size: $font-size-m;
       }
     }
 
-    @include rwd(1365) {
-      @include orientation(landscape) {
-        font-size: $font-size-l;
-      }
-    }
-
     @include screen(big-desktop) {
+      margin-top: 0;
       font-size: $font-size-s;
-      width: 60%;
     }
 
     @include screen(large) {
@@ -161,24 +103,23 @@
   }
 
   &__phone {
-    height: 10%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 30px;
     font-size: $font-size-xxs;
-    color: #035e8c;
+    color: $color-secondary;
     cursor: pointer;
 
     &:hover {
-      color: darken(#035e8c, 80%);
+      color: darken($color-secondary, 80%);
     }
 
     @include screen(mobile) {
       font-size: $font-size-xs;
 
       @include orientation(landscape) {
-        height: 10%;
         font-size: $font-size-xxs;
       }
     }
@@ -199,15 +140,9 @@
       }
     }
 
-    @include rwd(1365) {
-      @include orientation(landscape) {
-        font-size: $font-size-m;
-      }
-    }
-
     @include screen(big-desktop) {
+      margin-bottom: 10px;
       font-size: $font-size-xs;
-      height: 20%;
     }
 
     @include screen(large) {
@@ -217,13 +152,10 @@
 
   &__icon {
     font-size: $font-size-s;
+    margin-right: 10px;
 
-    @include screen(mobile) {
-      font-size: $font-size-m;
-
-      @include orientation(landscape) {
-        font-size: $font-size-s;
-      }
+    @include orientation(landscape) {
+      font-size: $font-size-s;
     }
 
     @include screen(tablet) {
@@ -242,12 +174,6 @@
       }
     }
 
-    @include rwd(1365) {
-      @include orientation(landscape) {
-        font-size: $font-size-xl;
-      }
-    }
-
     @include screen(big-desktop) {
       font-size: $font-size-s;
     }
@@ -258,30 +184,16 @@
   }
 
   &__form {
-    height: 60%;
-    width: 90%;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 10px 0;
-    background-color: darken($color-white, 2%);
-    border-radius: 5%;
-    -webkit-border-radius: 5%;
-    -moz-border-radius: 5%;
-    -ms-border-radius: 5%;
-    -o-border-radius: 5%;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02),
-      0 8px 8px rgba(0, 0, 0, 0.03), 0 18px 18px rgba(0, 0, 0, 0.04),
-      0 28px 28px rgba(0, 0, 0, 0.05), 0 38px 38px rgba(0, 0, 0, 0.06);
+    margin-top: 20px;
+    background-color: $color-white;
 
-    @include screen(mobile) {
-      height: 50%;
-
-      @include orientation(landscape) {
-        width: 60%;
-      }
+    @include orientation(landscape) {
+      width: 60%;
     }
 
     @include screen(tablet) {
@@ -289,16 +201,18 @@
     }
 
     @include screen(big-desktop) {
-      height: 85%;
-      width: 25%;
-      right: 5%;
+      width: 22%;
+      padding-bottom: 20px;
+      right: 10%;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02),
+        0 8px 8px rgba(0, 0, 0, 0.03), 0 18px 18px rgba(0, 0, 0, 0.04),
+        0 28px 28px rgba(0, 0, 0, 0.05), 0 38px 38px rgba(0, 0, 0, 0.06);
     }
   }
 
   &__label {
-    position: relative;
-    left: 0;
     font-size: $font-size-xxs;
+    margin: 20px 0;
 
     @include screen(mobile) {
       font-size: $font-size-xs;
@@ -324,14 +238,8 @@
       }
     }
 
-    @include rwd(1365) {
-      @include orientation(landscape) {
-        font-size: $font-size-m;
-      }
-    }
-
     @include screen(big-desktop) {
-      font-size: $font-size-xs;
+      font-size: $font-size-xxs;
     }
 
     @include screen(large) {
@@ -341,10 +249,9 @@
 
   &__input {
     width: 80%;
-    border: none;
-    border-bottom: 1px solid #035e8c;
-    background-color: transparent;
-    color: #035e8c;
+    padding: 5px 10px;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
 
     @include screen(mobile) {
       font-size: $font-size-xxs;
@@ -368,12 +275,6 @@
 
       @include orientation(landscape) {
         font-size: $font-size-xs;
-      }
-    }
-
-    @include rwd(1365) {
-      @include orientation(landscape) {
-        font-size: $font-size-s;
       }
     }
 
@@ -387,11 +288,10 @@
   }
 
   &__textarea {
-    height: 30%;
     width: 80%;
-    border-color: #035e8c;
-    background-color: transparent;
-    resize: none;
+    padding: 5px 10px;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
 
     @include screen(mobile) {
       font-size: $font-size-xxs;
@@ -418,12 +318,6 @@
       }
     }
 
-    @include rwd(1365) {
-      @include orientation(landscape) {
-        font-size: $font-size-s;
-      }
-    }
-
     @include screen(big-desktop) {
       font-size: $font-size-xxs;
     }
@@ -434,21 +328,17 @@
   }
 
   &__btn {
-    background-color: #035e8c;
-    font-size: $font-size-xxs;
+    background-color: $color-secondary;
     color: $color-white;
+    font-size: $font-size-xs;
     border: 0;
-    border-radius: 20px;
+    margin-top: 20px;
     padding: 5px 20px;
     transition: 0.15s background-color;
     cursor: pointer;
 
-    @include screen(mobile) {
-      font-size: $font-size-xs;
-
-      @include orientation(landscape) {
-        font-size: $font-size-xxs;
-      }
+    @include orientation(landscape) {
+      font-size: $font-size-xxs;
     }
 
     @include screen(tablet) {
@@ -467,14 +357,8 @@
       }
     }
 
-    @include rwd(1365) {
-      @include orientation(landscape) {
-        font-size: $font-size-m;
-      }
-    }
-
     @include screen(big-desktop) {
-      font-size: $font-size-xs;
+      font-size: $font-size-xxs;
     }
 
     @include screen(large) {
@@ -482,23 +366,15 @@
     }
 
     &:hover {
-      background-color: darken(#035e8c, 10%);
+      background-color: darken($color-secondary, 10%);
     }
   }
 }
 
 .fa-arrow-circle-right {
   transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
 
   @include screen(big-desktop) {
     transform: rotate(0);
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -o-transform: rotate(0);
   }
 }
