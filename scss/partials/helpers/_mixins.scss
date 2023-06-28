@@ -1,73 +1,53 @@
-@mixin flexbox {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-}
-
 @mixin screen($size) {
-    @if $size==mobile {
-        @media #{$mobile} {
-            @content;
-        }
+  @if $size==mobile {
+    @media #{$mobile} {
+      @content;
     }
-
-    @else if $size==tablet {
-        @media #{$tablet} {
-            @content;
-        }
+  } @else if $size==tablet {
+    @media #{$tablet} {
+      @content;
     }
-
-    @else if $size==desktop {
-        @media #{$desktop} {
-            @content;
-        }
+  } @else if $size==desktop {
+    @media #{$desktop} {
+      @content;
     }
-
-    @else if $size==big-desktop {
-        @media #{$big-desktop} {
-            @content;
-        }
+  } @else if $size==big-desktop {
+    @media #{$big-desktop} {
+      @content;
     }
-
-    @else if $size==large {
-        @media #{$large} {
-            @content;
-        }
+  } @else if $size==large {
+    @media #{$large} {
+      @content;
     }
-
-    @else {
-        @media #{$size} {
-            @content;
-        }
+  } @else {
+    @media #{$size} {
+      @content;
     }
+  }
 }
 
 @mixin orientation($direction) {
-
-    @if $direction==landscape {
-        @media #{$orientation-landscape} {
-            @content;
-        }
+  @if $direction==landscape {
+    @media #{$orientation-landscape} {
+      @content;
     }
+  }
 
-    @if $direction==portrait {
-        @media #{$orientation-portrait} {
-            @content;
-        }
+  @if $direction==portrait {
+    @media #{$orientation-portrait} {
+      @content;
     }
+  }
 }
 
 @mixin rwd($screen) {
-    @media (min-width: $screen+'px') {
-        @content;
-    }
+  @media (min-width: $screen+"px") {
+    @content;
+  }
 }
 
-
 @mixin height($screen) {
-    @media (min-height: $screen+'px') {
-        @content;
-    }
+  @media (min-height: $screen + "px") {
+    @content;
+  }
 }

@@ -1,450 +1,320 @@
 .services {
-    min-height: 100vh;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  min-height: 100vh;
+  padding: 14vh 20px 20px;
+  padding-bottom: 20px;
+
+  @include screen(big-desktop) {
+    padding: 14vh 40px 50px;
+  }
+
+  &__heading {
+    position: relative;
+    font-size: $font-size-s;
+    text-align: center;
+    opacity: 0;
+    margin-bottom: 20px;
+
+    @include screen(tablet) {
+      font-size: $font-size-l;
+
+      @include orientation(landscape) {
+        font-size: $font-size-s;
+      }
+    }
+
+    @include screen(desktop) {
+      font-size: $font-size-l;
+
+      @include orientation(landscape) {
+        font-size: $font-size-m;
+      }
+    }
+
+    @include rwd(1365) {
+      @include orientation(landscape) {
+        font-size: $font-size-l;
+      }
+    }
 
     @include screen(big-desktop) {
-        padding-bottom: 50px;
+      font-size: $font-size-m;
     }
 
-    &__heading {
-        position: relative;
-        margin-top: 10px;
+    @include screen(large) {
+      font-size: $font-size-l;
+    }
+
+    &::before {
+      content: "";
+      width: 30%;
+      height: 100%;
+      position: absolute;
+      left: 13%;
+      background-color: $color-secondary;
+      z-index: -1;
+
+      @include screen(mobile) {
+        left: 14%;
+
+        @include orientation(landscape) {
+          left: 32%;
+          width: 15%;
+        }
+      }
+
+      @include screen(tablet) {
+        width: 20%;
+        left: 25%;
+
+        @include orientation(landscape) {
+          left: 32%;
+          width: 15%;
+        }
+      }
+
+      @include screen(desktop) {
+        @include orientation(landscape) {
+          left: 32%;
+        }
+      }
+
+      @include screen(big-desktop) {
+        width: 10%;
+        left: 38%;
+      }
+    }
+
+    &--color {
+      color: $color-white;
+    }
+
+    &--appear {
+      animation: fadeIn 0.5s both;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include screen(big-desktop) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: transform 0.25s;
+    display: flex;
+    align-items: center;
+
+    @include orientation(landscape) {
+      height: 80vh;
+    }
+
+    @include screen(tablet) {
+      height: 45vh;
+
+      @include orientation(landscape) {
+        height: 90vh;
+      }
+    }
+
+    @include screen(desktop) {
+      @include orientation(landscape) {
+        height: 70vh;
+      }
+    }
+
+    @include screen(big-desktop) {
+      height: 70vh;
+      width: 30%;
+    }
+
+    @include screen(large) {
+      height: 60vh;
+    }
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
+
+    &-1 {
+      background-image: url(../img/service-picture1.webp);
+    }
+
+    &-2 {
+      background-image: url(../img/service-picture2.webp);
+    }
+
+    &-3 {
+      background-image: url(../img/service-picture3.webp);
+    }
+
+    &-wrapper {
+      width: 100%;
+      height: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-xs;
+    color: $color-white;
+    text-align: center;
+    transform: translatey(150%);
+    transition: transform 0.4s ease;
+
+    @include height(700) {
+      font-size: $font-size-s;
+      transform: translateY(100%);
+    }
+
+    @include screen(tablet) {
+      font-size: $font-size-m;
+
+      @include orientation(landscape) {
         font-size: $font-size-s;
-        text-align: center;
-        z-index: 2;
-        opacity: 0;
-
-        @include screen(tablet) {
-            font-size: $font-size-l;
-
-            @include orientation(landscape) {
-                font-size: $font-size-s;
-            }
-        }
-
-        @include screen(desktop) {
-            font-size: $font-size-l;
-
-            @include orientation(landscape) {
-                font-size: $font-size-m;
-            }
-        }
-
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                font-size: $font-size-l;
-            }
-        }
-
-        @include screen(big-desktop) {
-            font-size: $font-size-m;
-        }
-
-        @include screen(large) {
-            font-size: $font-size-l;
-        }
-
-        &::before {
-            content: '';
-            width: 30%;
-            height: 100%;
-            position: absolute;
-            left: 13%;
-            background-color: $color-secondary;
-            z-index: -1;
-
-            @include screen(mobile) {
-                left: 14%;
-
-                @include orientation(landscape) {
-                    left: 32%;
-                    width: 15%;
-                }
-            }
-
-            @include screen(tablet) {
-                width: 20%;
-                left: 24%;
-
-                @include orientation(landscape) {
-                    left: 32%;
-                    width: 15%;
-                }
-            }
-
-            @include screen(desktop) {
-                @include orientation(landscape) {
-                    left: 32%;
-                }
-            }
-
-            @include screen(big-desktop) {
-                width: 10%;
-                left: 38%;
-            }
-        }
-
-        &--color {
-            color: $color-white;
-        }
-
-        &--appear {
-            animation: fadeIn .5s .5s both;
-            -webkit-animation: fadeIn .5s .5s both;
-        }
+      }
     }
 
-    &__describtion {
-        padding: 0 4%;
-        margin: 20px auto;
-        font-size: $font-size-xxs;
-        opacity: 0;
+    @include screen(desktop) {
+      font-size: $font-size-l;
 
-        @include screen(mobile) {
-            @include orientation(landscape) {
-                width: 80%;
-                line-height: 1.8;
-            }
-        }
-
-        @include screen(tablet) {
-            width: 90%;
-            font-size: $font-size-s;
-
-            @include orientation(landscape) {
-                width: 80%;
-                font-size: $font-size-xxs;
-            }
-        }
-
-        @include screen(desktop) {
-            @include orientation(landscape) {
-                font-size: $font-size-xs;
-            }
-        }
-
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                font-size: $font-size-s;
-            }
-        }
-
-        @include screen(big-desktop) {
-            font-size: $font-size-xs;
-            width: 70%;
-            line-height: 1.5;
-        }
-
-        @include screen(large) {
-            font-size: $font-size-s;
-        }
-
-        &--appear {
-            animation: fadeIn .5s 1s both;
-            -webkit-animation: fadeIn .5s 1s both;
-        }
+      @include orientation(landscape) {
+        font-size: $font-size-m;
+      }
     }
 
-    &__wrapper {
-        @include flexbox;
-        flex-direction: column;
-        align-items: center;
-        z-index: -1;
-
-        @include screen(big-desktop) {
-            flex-direction: row;
-            justify-content: space-around;
-            align-self: center;
-        }
+    @include screen(big-desktop) {
+      font-size: $font-size-s;
+      transform: translateY(200%);
     }
 
-    &__item {
-        height: 40vh;
-        width: 100%;
-        position: relative;
-        margin-top: 20px;
-        background-size: cover;
-        background-position: center;
-        z-index: 0;
-        box-shadow: 5px 5px 20px;
-        transition: transform .25s;
-
-        @include screen(mobile) {
-            height: 45vh;
-
-            @include orientation(landscape) {
-                height: 80vh;
-            }
-        }
-
-        @include screen (tablet) {
-            height: 45vh;
-
-            @include orientation(landscape) {
-                height: 90vh;
-            }
-        }
-
-        @include screen(desktop) {
-            @include orientation(landscape) {
-                height: 70vh;
-            }
-        }
-
-        @include screen(big-desktop) {
-            height: 70vh;
-            width: 30%;
-        }
-
-        @include screen(large) {
-            height: 60vh;
-        }
-
-        &:hover {
-            transform: scale(1.00);
-            -webkit-transform: scale(1.00);
-            -moz-transform: scale(1.00);
-            -ms-transform: scale(1.00);
-            -o-transform: scale(1.00);
-
-            @include screen(big-desktop) {
-                transform: scale(1.02);
-                -webkit-transform: scale(1.02);
-                -moz-transform: scale(1.02);
-                -ms-transform: scale(1.02);
-                -o-transform: scale(1.02);
-            }
-        }
-
-        &::before {
-            content: '';
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: -1;
-        }
-
-        &-1 {
-            background-image: url();
-
-            &.visible {
-                background-image: url(../img/service-picture1.webp);
-            }
-        }
-
-        &-2 {
-            background-image: url();
-
-            &.visible {
-                background-image: url(../img/service-picture2.webp);
-            }
-        }
-
-        &-3 {
-            background-image: url();
-
-            &.visible {
-                background-image: url(../img/service-picture3.webp);
-            }
-        }
-
-        &-wrapper {
-            width: 100%;
-            height: 100%;
-            @include flexbox;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            padding: 10px 0;
-        }
+    @include screen(large) {
+      font-size: $font-size-m;
     }
 
-    &__title {
-        width: 75%;
+    &--up {
+      transform: translateY(0);
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+    font-size: $font-size-xxs;
+    color: $color-white;
+    line-height: 1.7;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+
+    @include screen(mobile) {
+      @include height(700) {
         font-size: $font-size-xs;
-        color: $color-white;
-        text-align: center;
-        z-index: 2;
-        transform: translatey(100%);
-        -webkit-transform: translatey(100%);
-        -moz-transform: translatey(100%);
-        -ms-transform: translatey(100%);
-        -o-transform: translatey(100%);
-        transition: transform .4s ease;
-
-        @include screen(mobile) {
-            width: 70%;
-            transform: translateY(150%);
-
-            @include height(700) {
-                width: 81%;
-                font-size: $font-size-s;
-                transform: translateY(100%);
-            }
-        }
-
-        @include screen (tablet) {
-            width: 60%;
-            font-size: $font-size-m;
-
-            @include orientation(landscape) {
-                font-size: $font-size-s;
-            }
-        }
-
-        @include screen (desktop) {
-            font-size: $font-size-l;
-
-            @include orientation(landscape) {
-                font-size: $font-size-m;
-                width: 45%;
-            }
-        }
-
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                font-size: $font-size-l;
-            }
-        }
-
-        @include screen (big-desktop) {
-            width: 75%;
-            font-size: $font-size-s;
-            transform: translateY(200%);
-        }
-
-        @include screen(large) {
-            width: 80%;
-            font-size: $font-size-m;
-        }
-
-        &--up {
-            transform: translateY(0);
-        }
+      }
     }
 
-    &__text {
-        width: 75%;
-        margin: 0 auto;
-        font-size: $font-size-xxs;
-        color: $color-white;
-        line-height: 1.7;
-        text-align: center;
-        transform: scale(0);
-        transition: transform .4s ease;
+    @include screen(tablet) {
+      font-size: $font-size-s;
 
-        @include screen(mobile) {
-            @include height(700) {
-                font-size: $font-size-xs;
-            }
-        }
-
-        @include screen (tablet) {
-            font-size: $font-size-s;
-
-            @include orientation(landscape) {
-                font-size: $font-size-xs;
-            }
-        }
-
-        @include screen (desktop) {
-            font-size: $font-size-m;
-
-            @include orientation(landscape) {
-                font-size: $font-size-s;
-            }
-        }
-
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                font-size: $font-size-m;
-            }
-        }
-
-        @include screen (big-desktop) {
-            font-size: $font-size-xs;
-        }
-
-        @include screen(large) {
-            font-size: $font-size-s;
-        }
-
-        &--appear {
-            transform: scale(0.8);
-        }
+      @include orientation(landscape) {
+        font-size: $font-size-xs;
+      }
     }
 
-    &__btn {
-        background-color: $color-secondary;
+    @include screen(desktop) {
+      font-size: $font-size-m;
+
+      @include orientation(landscape) {
+        font-size: $font-size-s;
+      }
+    }
+
+    @include screen(big-desktop) {
+      font-size: $font-size-xs;
+    }
+
+    @include screen(large) {
+      font-size: $font-size-s;
+    }
+
+    &--appear {
+      transform: scale(0.8);
+    }
+  }
+
+  &__btn {
+    background-color: $color-secondary;
+    color: $color-white;
+    border: 0;
+    padding: 5px 20px;
+    transform: translateY(-200%);
+    box-shadow: 0 2px 2px 0 #333333, 0 2px 2px 0 #333333;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+    @include screen(mobile) {
+      transform: translateY(-260%);
+
+      @include height(700) {
         font-size: $font-size-xxs;
-        color: $color-white;
-        border: 0;
-        border-radius: 20px;
+      }
+    }
+
+    @include screen(tablet) {
+      font-size: $font-size-s;
+      padding: 10px 25px;
+      transform: translateY(-200%);
+
+      @include orientation(landscape) {
+        font-size: $font-size-xs;
         padding: 5px 20px;
-        transform: translateY(-200%);
-        transition: .15s background-color;
-        box-shadow: 0 2px 5px 0 #333333, 0 3px 3px 0 #333333;
-        transition: transform .4s ease;
-        cursor: pointer;
-
-        @include screen(mobile) {
-            transform: translateY(-260%);
-
-            @include height(700) {
-                font-size: $font-size-xs;
-            }
-        }
-
-        @include screen (tablet) {
-            font-size: $font-size-s;
-            padding: 10px 25px;
-            transform: translateY(-200%);
-
-            @include orientation(landscape) {
-                font-size: $font-size-xs;
-                padding: 5px 20px;
-            }
-        }
-
-        @include screen (desktop) {
-            font-size: $font-size-m;
-            padding: 15px 30px;
-
-            @include orientation(landscape) {
-                font-size: $font-size-s;
-                padding: 10px 25px;
-            }
-        }
-
-        @include rwd(1365) {
-            @include orientation(landscape) {
-                font-size: $font-size-m;
-                padding: 15px 30px;
-            }
-        }
-
-        @include screen (big-desktop) {
-            font-size: $font-size-xs;
-            padding: 10px 25px;
-            transform: translateY(-300%);
-            -webkit-transform: translateY(-300%);
-            -moz-transform: translateY(-300%);
-            -ms-transform: translateY(-300%);
-            -o-transform: translateY(-300%);
-        }
-
-        @include screen(large) {
-            font-size: $font-size-s;
-        }
-
-        &:hover {
-            background-color: darken($color-secondary, 10%);
-        }
-
-        &--down {
-            transform: translateY(0);
-        }
+      }
     }
+
+    @include screen(desktop) {
+      font-size: $font-size-m;
+      padding: 15px 30px;
+
+      @include orientation(landscape) {
+        font-size: $font-size-s;
+        padding: 10px 25px;
+      }
+    }
+
+    @include screen(big-desktop) {
+      font-size: $font-size-xxs;
+      padding: 10px 25px;
+      transform: translateY(-300%);
+    }
+
+    @include screen(large) {
+      font-size: $font-size-s;
+    }
+
+    &:hover {
+      background-color: darken($color-secondary, 10%);
+    }
+
+    &--down {
+      transform: translateY(0);
+    }
+  }
 }
